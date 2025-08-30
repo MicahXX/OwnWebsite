@@ -13,7 +13,7 @@ const disableLightmode = () => {
 
 if(lightmode === "active") enableLightmode();
 
-lightmodeButton.addEventListener("click", (e) => {
+lightmodeButton.addEventListener("click", () => {
     lightmode = localStorage.getItem('lightmode');
     lightmode !== "active" ? enableLightmode() : disableLightmode();
 })
