@@ -21,6 +21,7 @@ lightmodeButton.addEventListener("click", () => {
 const changeText = document.querySelector("#lightmode");
 
 changeText.addEventListener("click", function() {
+    lightmode = localStorage.getItem('lightmode');
     if (lightmode === "active") changeText.textContent = "Dark mode";
     if (lightmode !== "active") changeText.textContent = "Light mode";
 });
