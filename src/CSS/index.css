@@ -39,8 +39,7 @@ nav {
     gap: 1.2rem;
 }
 
-nav a,
-nav button {
+nav a {
     color: var(--text);
     font-family: Verdana, serif;
     font-weight: bolder;
@@ -52,12 +51,22 @@ nav button {
     cursor: pointer;
 }
 
-a:hover{
-    transform: scale(1.2);
+nav button {
+    color: var(--text);
+    font-family: Verdana, serif;
+    font-weight: bolder;
+    font-size: xxx-large;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0.5rem;
 }
 
-button:hover {
-    transform: scale(1.15);
+a:hover{
+    transform: scale(1.2);
 }
 
 img:hover{
