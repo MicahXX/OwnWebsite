@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-body::after {
+body::after { /* maybe delete this, since it just adds space*/
     content: "";
     display: block;
     height: 100vh;
