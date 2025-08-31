@@ -29,7 +29,7 @@ h2 {
     color: var(--text);
     font-family: Verdana, serif;
     text-align: justify-all;
-    font-weight: 3;
+    font-weight: normal;
     font-size: x-large;
 }
 
@@ -39,7 +39,8 @@ nav {
     gap: 1.2rem;
 }
 
-nav a {
+nav a,
+nav button {
     color: var(--text);
     font-family: Verdana, serif;
     font-weight: bolder;
@@ -51,22 +52,12 @@ nav a {
     cursor: pointer;
 }
 
-nav button {
-    color: var(--text);
-    font-family: Verdana, serif;
-    font-weight: bolder;
-    font-size: xxx-large;
-    background: none;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    cursor: pointer;
-    position: absolute;
-    right: 0.5rem;
-}
-
 a:hover{
     transform: scale(1.2);
+}
+
+button:hover {
+    transform: scale(1.15);
 }
 
 img:hover{
