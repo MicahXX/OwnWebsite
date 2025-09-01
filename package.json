@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/Java/Color_mode.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf docs && mkdir docs && cp -r src/* docs/"
   },
   "private": true
 }
