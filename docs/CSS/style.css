@@ -1,0 +1,86 @@
+body {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+body::after { /* maybe delete this, since it just adds space*/
+    content: "";
+    display: block;
+    height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color: #00ecff;
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+h2 {
+    color: var(--text);
+    font-family: Verdana, serif;
+    text-align: justify-all;
+    font-weight: normal;
+    font-size: x-large;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a,
+nav button {
+    color: var(--text);
+    font-family: Verdana, serif;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    white-space: nowrap;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+img:hover{
+    transform: scale(1.2);
+}
+
+:root {
+    --text: #090604;
+    --background-image: url("https://wallpapers.com/images/hd/white-anime-40699scjpvivcs64.jpg");
+}
+
+.lightmode{
+    --text: #ffffff;
+    --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png");
+}
