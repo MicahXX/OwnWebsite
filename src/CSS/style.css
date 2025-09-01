@@ -77,10 +77,10 @@ img:hover{
 
 :root {
     --text: #090604;
-    --background-image: url("https://wallpapers.com/images/hd/white-anime-40699scjpvivcs64.jpg");
+    --background-image: url("https://wallpapers.com/images/hd/white-anime-40699scjpvivcs64.jpg"); /* change img */
 }
 
 .lightmode{
     --text: #ffffff;
-    --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png");
+    --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
