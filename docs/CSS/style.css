@@ -17,11 +17,19 @@ html {
     scroll-behavior: smooth;
 }
 
+hr {
+    color: var(--line);
+    border: none;
+    border-top: 2px solid;
+    width: min(1200px, 50%);
+    margin: 20px auto;
+}
+
 h1 {
-    color: #00ecff;
-    font-family: sans-serif;
-    text-align: center;
-    font-weight: bold;
+    background: linear-gradient(var(--text4), var(--text5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: clamp(2rem, 4vw, 3rem);
     justify-content: center;
 }
@@ -50,7 +58,8 @@ nav button {
     background: none;
     border: none;
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
+    text-decoration-color: var(--text);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -58,15 +67,24 @@ nav button {
     padding: 0.25rem 0.5rem;
     font-size: clamp(1rem, 2vw, 1.5rem);
     white-space: nowrap;
+    transition:
+            transform 0.3s ease,
+            text-decoration-color 0.3s ease,
+            color 0.3s ease;
 }
 
-a:hover{
+nav a:hover {
     transform: scale(1.15);
+    text-decoration-color: var(--text3);
+    text-decoration: underline;
 }
 
-button:hover {
+nav button:hover {
     transform: scale(1.15);
+    text-decoration-color: var(--text3);
+    text-decoration: underline;
 }
+
 
 #tools,
 #socials {
@@ -95,11 +113,19 @@ button:hover {
 :root {
     --text: #000000;
     --text2: #000000;
+    --text3: #00ecff;
+    --text4: #0e297a;
+    --text5: #00ecff;
+    --line: #000000;
     --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); /* change img */
 }
 
 .lightmode{
     --text: #ffffff;
     --text2: #ffffff;
+    --text3: #00ecff;
+    --text4: rgb(0, 236, 255);
+    --text5: rgb(14, 41, 122);
+    --line: #ffffff;
     --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
