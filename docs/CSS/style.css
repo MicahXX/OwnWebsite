@@ -22,7 +22,8 @@ h1 {
     font-family: sans-serif;
     text-align: center;
     font-weight: bold;
-    font-size: xxx-large;
+    font-size: clamp(2rem, 4vw, 3rem);
+    justify-content: center;
 }
 
 h2 {
@@ -30,7 +31,8 @@ h2 {
     font-family: Verdana, serif;
     text-align: justify-all;
     font-weight: normal;
-    font-size: x-large;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    justify-content: center;
 }
 
 nav {
