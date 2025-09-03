@@ -82,23 +82,25 @@ button:hover {
     max-width: 80%;
     height: auto;
     border-radius: 5px;
-    padding: 2px 3px;
+    padding: 3px 3px;
     cursor: pointer;
     transition: background-color 0.15s ease;
 }
 
 #tools img:hover,
 #socials img:hover {
-    background-color: var(--text);
+    background-color: var(--text2);
 }
 
 
 :root {
     --text: #000000;
+    --text2: #000000;
     --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); /* change img */
 }
 
 .lightmode{
     --text: #ffffff;
+    --text2: #ffffff;
     --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
