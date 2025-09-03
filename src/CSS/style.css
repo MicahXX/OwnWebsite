@@ -83,7 +83,6 @@ button:hover {
     height: auto;
     border-radius: 5px;
     padding: 3px 3px;
-    cursor: pointer;
     transition: background-color 0.15s ease;
 }
 
