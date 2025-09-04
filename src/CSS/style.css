@@ -68,9 +68,9 @@ nav button {
     font-size: clamp(1rem, 2vw, 1.5rem);
     white-space: nowrap;
     transition:
-            transform 0.3s ease,
-            text-decoration-color 0.3s ease,
-            color 0.3s ease;
+            transform 0.2s ease,
+            text-decoration-color 0.2s ease,
+            color 0.2s ease;
 }
 
 nav a:hover {
@@ -101,7 +101,7 @@ nav button:hover {
     height: auto;
     border-radius: 5px;
     padding: 3px 3px;
-    transition: background-color 0.15s ease;
+    transition: background-color 0.10s ease;
 }
 
 #tools img:hover,
