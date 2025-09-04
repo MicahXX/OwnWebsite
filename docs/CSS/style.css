@@ -113,7 +113,7 @@ nav button:hover {
 :root {
     --text: #000000;
     --text2: #000000;
-    --text3: #00ecff;
+    --text3: #000000;
     --text4: #0e297a;
     --text5: #00ecff;
     --line: #000000;
@@ -123,7 +123,7 @@ nav button:hover {
 .lightmode{
     --text: #ffffff;
     --text2: #ffffff;
-    --text3: #00ecff;
+    --text3: #ffffff;
     --text4: rgb(0, 236, 255);
     --text5: rgb(14, 41, 122);
     --line: #ffffff;
