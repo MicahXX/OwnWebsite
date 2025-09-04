@@ -95,9 +95,8 @@ nav button:hover {
 
 #tools img,
 #socials img {
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
-    border-radius: 5px;
     margin: 0.2rem;
 }
 
