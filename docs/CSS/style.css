@@ -107,7 +107,7 @@ nav button:hover {
     initial-value: 0deg;
 }
 
-#socials img:hover,
+#socials img,
 #tools img {
     box-sizing: border-box;
     border-radius: 8px;
@@ -127,6 +127,10 @@ nav button:hover {
 
 @keyframes toolsBorderSpin {
     to { --angle: 360deg; }
+}
+
+#socials img:hover {
+    transform: scale(1.10);
 }
 
 
