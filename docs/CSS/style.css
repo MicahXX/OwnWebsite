@@ -91,13 +91,14 @@ nav button:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1rem 0;
 }
 
 #tools img,
 #socials img {
-    max-width: 90%;
+    max-width: 80%;
     height: auto;
+    border-radius: 5px;
+    margin: 0.6rem;
 }
 
 
