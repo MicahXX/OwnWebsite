@@ -26,7 +26,7 @@ hr {
 }
 
 h1 {
-    background: linear-gradient(var(--text4), var(--text5));
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -35,7 +35,7 @@ h1 {
 }
 
 h2 {
-    color: var(--text);
+    color: var(--darkLight);
     font-family: Verdana, serif;
     text-align: justify-all;
     font-weight: normal;
@@ -52,14 +52,14 @@ nav {
 
 nav a,
 nav button {
-    color: var(--text);
+    color: var(--darkLight);
     font-family: Verdana, serif;
     font-weight: bolder;
     background: none;
     border: none;
     outline: none;
     text-decoration: none;
-    text-decoration-color: var(--text);
+    text-decoration-color: var(--darkLight);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -75,13 +75,13 @@ nav button {
 
 nav a:hover {
     transform: scale(1.15);
-    text-decoration-color: var(--text3);
+    text-decoration-color: var(--buttonDarkLight);
     text-decoration: underline;
 }
 
 nav button:hover {
     transform: scale(1.15);
-    text-decoration-color: var(--text3);
+    text-decoration-color: var(--buttonDarkLight);
     text-decoration: underline;
 }
 
@@ -116,10 +116,10 @@ nav button:hover {
             linear-gradient(#0000, #0000) padding-box,
             conic-gradient(
                     from var(--angle),
-                    var(--text6),
-                    var(--text7),
-                    var(--text8),
-                    var(--text9)
+                    var(--gradientAnimation1),
+                    var(--gradientAnimation2),
+                    var(--gradientAnimation3),
+                    var(--gradientAnimation4)
             ) border-box;
 
     animation: toolsBorderSpin 4s linear infinite;
@@ -135,31 +135,28 @@ nav button:hover {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-
 :root {
-    --text: #000000;
-    --text2: #000000;
-    --text3: #000000;
-    --text4: #0e297a;
-    --text5: #00ecff;
-    --text6: #000000;
-    --text7: #000000;
-    --text8: #ffffff;
-    --text9: #000000;
+    --darkLight: #000000;
+    --buttonDarkLight: #000000;
+    --gradientName1: #0e297a;
+    --gradientName2: #00ecff;
+    --gradientAnimation1: #000000;
+    --gradientAnimation2: #000000;
+    --gradientAnimation3: #ffffff;
+    --gradientAnimation4: #000000;
     --line: #000000;
     --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); /* change img */
 }
 
 .lightmode{
-    --text: #ffffff;
-    --text2: #ffffff;
-    --text3: #ffffff;
-    --text4: rgb(0, 236, 255);
-    --text5: rgb(14, 41, 122);
-    --text6: #ffffff;
-    --text7: #ffffff;
-    --text8: #000000;
-    --text9: #ffffff;
+    --darkLight: #ffffff;
+    --buttonDarkLight: #ffffff;
+    --gradientName1: rgb(0, 236, 255);
+    --gradientName2: rgb(14, 41, 122);
+    --gradientAnimation1: #ffffff;
+    --gradientAnimation2: #ffffff;
+    --gradientAnimation3: #000000;
+    --gradientAnimation4: #ffffff;
     --line: #ffffff;
     --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
