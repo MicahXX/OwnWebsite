@@ -42,7 +42,7 @@ h2 {
 
 nav {
     position: fixed;
-    bottom: 3%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     padding: clamp(0.5rem, 1rem, 1.5rem);
