@@ -131,7 +131,8 @@ nav button:hover {
 
 #socials img:hover {
     cursor: pointer;
-    transform: scale(1.10);
+    transform: scale(1.15);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 
