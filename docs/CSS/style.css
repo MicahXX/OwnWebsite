@@ -78,7 +78,7 @@ nav button {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(0.7rem, 2vw, 1.5rem);
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -116,12 +116,11 @@ nav button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
 #tools img {
-    width: clamp(240px, 40vw, 500px);
+    width: clamp(150px, 55vw, 500px);
     height: auto;
     border-radius: 12px;
 }
