@@ -45,12 +45,12 @@ nav {
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.8rem 2rem;
+    padding: 0.6rem 1.5rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 
     border-radius: 16px;
     border: 3px solid transparent;
@@ -84,7 +84,7 @@ nav button {
 
 nav a:hover,
 nav button:hover {
-    transform: scale(1.25);
+    transform: scale(1.2);
 }
 
 #home {
@@ -116,12 +116,12 @@ nav button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem; /* a bit more breathing space */
-    flex-wrap: wrap; /* ✅ avoids overflow */
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 #tools img {
-    flex: 0 0 clamp(3rem, 8vw, 6rem); /* bigger min & max size */
+    flex: 0 0 clamp(3rem, 8vw, 6rem);
     height: auto;
     border-radius: 12px;
 }
