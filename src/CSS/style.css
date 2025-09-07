@@ -7,10 +7,8 @@ body {
     text-align: center;
 }
 
-body::after { /* maybe delete this, since it just adds space */
-    content: "";
-    display: block;
-    height: 100vh;
+section {
+    min-height: 100vh;
 }
 
 html {
@@ -37,17 +35,37 @@ h1 {
 h2 {
     color: var(--darkLight);
     font-family: Verdana, serif;
-    text-align: justify-all;
     font-weight: normal;
     font-size: clamp(1rem, 2vw, 1.5rem);
     justify-content: center;
 }
 
 nav {
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 2rem;
+
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 2rem;
+
+    border-radius: 16px;
+    border: 3px solid transparent;
+    background:
+            linear-gradient(#0e297a, #00ecff) padding-box,
+            conic-gradient(
+                    from var(--angle),
+                    var(--gradientAnimation5),
+                    var(--gradientAnimation6),
+                    var(--gradientAnimation7),
+                    var(--gradientAnimation8)
+            ) border-box;
+
+    animation: toolsBorderSpin 4s linear infinite;
+    z-index: 1000;
 }
 
 nav a,
@@ -55,51 +73,58 @@ nav button {
     color: var(--darkLight);
     font-family: Verdana, serif;
     font-weight: bolder;
+    text-decoration: none;
     background: none;
     border: none;
     outline: none;
-    text-decoration: none;
-    text-decoration-color: var(--darkLight);
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem 0.5rem;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    white-space: nowrap;
-    transition:
-            transform 0.3s ease,
-            text-decoration-color 0.3s ease,
-            color 0.3s ease;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
-    transform: scale(1.15);
-    text-decoration-color: var(--buttonDarkLight);
-    text-decoration: underline;
-}
-
+nav a:hover,
 nav button:hover {
-    transform: scale(1.15);
-    text-decoration-color: var(--buttonDarkLight);
-    text-decoration: underline;
+    transform: scale(1.25);
 }
 
-#tools,
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #socials {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-#tools img,
-#socials img {
-    max-width: 90%;
+#tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#tools img {
+    width: clamp(240px, 40vw, 500px);
     height: auto;
-    margin: 0.2rem;
+    border-radius: 12px;
 }
-
 
 @property --angle {
     syntax: '<angle>';
@@ -144,6 +169,10 @@ nav button:hover {
     --gradientAnimation2: #000000;
     --gradientAnimation3: #ffffff;
     --gradientAnimation4: #000000;
+    --gradientAnimation5: #ffffff;
+    --gradientAnimation6: #ffffff;
+    --gradientAnimation7: #ffffff;
+    --gradientAnimation8: #020202;
     --line: #000000;
     --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); /* change img */
 }
@@ -157,6 +186,10 @@ nav button:hover {
     --gradientAnimation2: #ffffff;
     --gradientAnimation3: #000000;
     --gradientAnimation4: #ffffff;
+    --gradientAnimation5: #020202;
+    --gradientAnimation6: #020202;
+    --gradientAnimation7: #020202;
+    --gradientAnimation8: #ffffff;
     --line: #ffffff;
     --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
