@@ -7,8 +7,41 @@ body {
     text-align: center;
 }
 
-section {
+body {
+    padding-bottom: 25vh;
+}
+
+#home {
     min-height: 100vh;
+}
+
+#about {
+    min-height: 100vh;
+}
+
+#tools {
+    min-height: 100vh;
+}
+
+#numbers {
+    min-height: 20vh;
+}
+
+input {
+    border-radius: 16px;
+    border: 4px solid transparent;
+    background:
+            linear-gradient(#ffffff, #ffffff) padding-box,
+            conic-gradient(
+                    from var(--angle),
+                    var(--gradientAnimation1),
+                    var(--gradientAnimation2),
+                    var(--gradientAnimation3),
+                    var(--gradientAnimation4)
+            ) border-box;
+
+    animation: toolsBorderSpin 4s linear infinite;
+    z-index: 1000;
 }
 
 html {
@@ -38,6 +71,11 @@ h2 {
     font-weight: normal;
     font-size: clamp(1rem, 2vw, 1.5rem);
     justify-content: center;
+
+}
+
+label {
+    color: var(--darkLight);
 }
 
 nav {
@@ -191,5 +229,5 @@ nav button:hover {
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
-    --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
+    --background-image: url("./../imgs/moon.jpg");
 }
