@@ -1,5 +1,5 @@
 body {
-    /*!*background-image: var(--background-image);*! benutz wieder wenn img hasst*/
+    background-image: var(--background-image);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -174,8 +174,7 @@ nav button:hover {
     --gradientAnimation7: #ffffff;
     --gradientAnimation8: #020202;
     --line: #000000;
-    background-color: white;
-    /*--background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); !* change img *!*/
+    --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww"); /* change img */
 }
 
 .lightmode{
@@ -192,5 +191,5 @@ nav button:hover {
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
-    background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png");
+    --background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); /* change img */
 }
