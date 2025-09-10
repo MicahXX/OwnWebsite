@@ -192,6 +192,5 @@ nav button:hover {
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
-    /*--background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png"); !* change img *!*/
-    background-color: black;
+    background-image: url("https://4kwallpapers.com/images/wallpapers/satoru-gojo-7680x4320-15227.png");
 }
