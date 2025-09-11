@@ -23,10 +23,10 @@
 <section id="about">
     <h2>
         Hi! I'm a 15-year-old student from Austria, currently studying
-        <span style="color: #6fa4fc">Software Engineering</span> at an HTL (Higher Technical School).
-        I’m passionate about exploring <span style="color: #6fa4fc">new technologies</span>,
-        <span style="color: #6fa4fc">building projects</span>, and discovering how software can
-        <span style="color: #6fa4fc">solve real-world problems</span>.<br><br>
+        <span class="highlight">Software Engineering</span> at an HTL (Higher Technical School).
+        I’m passionate about exploring <span class="highlight">new technologies</span>,
+        <span class="highlight">building projects</span>, and discovering how software can
+        <span class="highlight">solve real-world problems</span>.<br><br>
         Beyond the classroom, I enjoy experimenting with different programming languages and frameworks,
         working on personal projects, and challenging myself to grow as a developer.<br><br>
         Also guess the number here if you are bored.
@@ -57,13 +57,14 @@
     <label for="number">Enter Random Number(0-10): </label>
     <input type="text" id="number" name="number"><br><br>
     <input type="submit" id="submitBtn" value="Result">
-    <label for="userHealth">Lives left: </label>
-    <div id="userHealth">3</div>
+    <label for="userHealth"></label>
     <div id="result"></div>
+    <div id="userHealth"><h2>Lives left: 3</h2></div>
     <audio id="correctSound" src="sounds/correct-choice-43861.mp3" preload="auto"></audio>
     <audio id="wrongSound" src="sounds/error-warning-login-denied-132113.mp3" preload="auto"></audio>
+    <audio id="lostSound" src="sounds/080205_life-lost-game-over-89697.mp3" preload="auto"></audio>
 </section>
-<h2>This website was made by MicahCode!</h2>
+
 <script src="Javascript/Color_mode.js"></script>
 <script src="Javascript/randomNumber.js"></script>
 </body>
