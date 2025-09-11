@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    padding-bottom: 25vh;
+    padding-bottom: 38vh;
 }
 
 #home {
@@ -19,12 +19,12 @@ body {
     min-height: 100vh;
 }
 
-#tools {
-    min-height: 100vh;
+#socials {
+    min-height: 10vh;
 }
 
-#numbers {
-    min-height: 20vh;
+#tools {
+    min-height: 80vh;
 }
 
 input {
