@@ -198,6 +198,30 @@ nav button:hover {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+#userHealth {
+    color: var(--darkLight);
+    font-family: Verdana, serif;
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    justify-content: center;
+}
+
+label {
+    color: var(--darkLight);
+    font-family: Verdana, serif;
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.5rem);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 :root {
     --darkLight: #000000;
     --buttonDarkLight: #000000;
