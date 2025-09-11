@@ -1,4 +1,4 @@
-let secretNumber = 10;
+let secretNumber = Math.floor((Math.random() * 101));
 
 const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
