@@ -3,7 +3,9 @@
 </h1>
 
 <p>
-  <img src="https://img.shields.io/badge/Website-micah.code-blue?style=for-the-badge" alt="Website Badge"/>
+  <a href="https://micahcode.com">
+       <img src="https://img.shields.io/badge/Website-micah.code-blue?style=for-the-badge" alt="Website Badge"/>
+  </a>
   <img src="https://img.shields.io/github/followers/MicahXX?style=for-the-badge" alt="Followers Badge"/>
   <img src="https://img.shields.io/github/stars/MicahXX/OwnWebsite?style=for-the-badge" alt="Stars Badge"/>
 </p>
