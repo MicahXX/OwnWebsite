@@ -211,7 +211,7 @@ nav button:hover {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-#userHealth {
+#userHealth, #result {
     color: var(--darkLight);
     font-family: Verdana, serif;
     font-weight: normal;
@@ -224,12 +224,6 @@ label {
     font-family: Verdana, serif;
     font-weight: normal;
     font-size: clamp(1rem, 2vw, 1.5rem);;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#result {
     display: flex;
     justify-content: center;
     align-items: center;
