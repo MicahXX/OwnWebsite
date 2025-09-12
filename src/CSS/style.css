@@ -3,7 +3,7 @@
     --buttonDarkLight: #000000;
     --gradientName1: #0e297a;
     --gradientName2: #00ecff;
-    --gradientName3: #ea8704;
+    --gradientName3: #0e297a;
     --gradientName4: #ea8704;
     --gradientAnimation1: #000000;
     --gradientAnimation2: #000000;
@@ -22,7 +22,7 @@
     --buttonDarkLight: #ffffff;
     --gradientName1: rgb(0, 236, 255);
     --gradientName2: rgb(14, 41, 122);
-    --gradientName3: rgba(255, 145, 0, 0.48);
+    --gradientName3: rgb(0, 236, 255);
     --gradientName4: rgba(255, 145, 0, 0.48);
     --gradientAnimation1: #ffffff;
     --gradientAnimation2: #ffffff;
@@ -33,7 +33,7 @@
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
-    --background-image: url("./../imgs/moon.jpg");
+    --background-image: url("./../imgs/moon_high_quality.png");
 }
 
 html {
@@ -59,7 +59,7 @@ body {
 }
 
 .golden {
-    background: linear-gradient(var(--gradientName3), var(--gradientName4));
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -77,6 +77,11 @@ h2, label, #userHealth, #result {
     color: var(--darkLight);
     font-weight: normal;
     font-size: clamp(1rem, 2vw, 1.5rem);
+}
+h5 {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 #loader {
@@ -181,13 +186,12 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
 #about {
     min-height: 50vh;
     display: block;
-    padding: 30vh 12vw;
+    padding: 25vh 10vw;
     text-align: center;
 }
 
-#socials {min-height: 40vh;}
 #tools { min-height: 20vh; padding-top: 20vh;}
-#numbers {min-height: 65vh; padding-top: 30vh; }
+#numbers {min-height: 75vh; padding-top: 30vh; }
 
 #tools img {
     flex: 0 0 clamp(5rem, 10vw, 8rem);
