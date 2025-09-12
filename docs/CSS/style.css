@@ -185,9 +185,9 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
     text-align: center;
 }
 
-#socials {min-height: 65vh;}
-#tools { min-height: 60vh; }
-#numbers {min-height: 40vh; }
+#socials {min-height: 40vh;}
+#tools { min-height: 20vh; padding-top: 20vh;}
+#numbers {min-height: 65vh; padding-top: 30vh; }
 
 #tools img {
     flex: 0 0 clamp(5rem, 10vw, 8rem);
@@ -276,4 +276,63 @@ input {
 
 @keyframes toolsBorderSpin {
     to { --angle: 360deg; }
+}
+
+label {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--darkLight);
+    font-weight: normal;
+}
+
+#userHealth, #result {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(0.1rem, 0.3vw, 0.3rem);
+}
+
+#retryBtn {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    color: var(--darkLight);
+    background: #ffffffcc;
+    border-radius: 12px;
+    border: 2px solid var(--gradientName1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="text"] {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    color: var(--darkLight);
+    background: #ffffffcc;
+    border-radius: 12px;
+    border: 2px solid var(--gradientName1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--gradientName2);
+    box-shadow: 0 0 10px var(--gradientName2);
+}
+
+input[type="submit"] {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--gradientName2);
 }
