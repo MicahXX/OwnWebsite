@@ -1,234 +1,3 @@
-body {
-    background-image: var(--background-image);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    text-align: center;
-}
-
-.highlight {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.golden {
-    background: linear-gradient(var(--gradientName3), var(--gradientName4));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-body {
-    padding-bottom: 38vh;
-}
-
-#home {
-    min-height: 100vh;
-}
-
-#about {
-    min-height: 100vh;
-}
-
-#socials {
-    min-height: 20vh;
-}
-
-#tools {
-    min-height: 80vh;
-}
-
-input {
-    border-radius: 16px;
-    border: 4px solid transparent;
-    background:
-            linear-gradient(#ffffff, #ffffff) padding-box,
-            conic-gradient(
-                    from var(--angle),
-                    var(--gradientAnimation1),
-                    var(--gradientAnimation2),
-                    var(--gradientAnimation3),
-                    var(--gradientAnimation4)
-            ) border-box;
-
-    animation: toolsBorderSpin 4s linear infinite;
-    z-index: 1000;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-hr {
-    color: var(--line);
-    border: none;
-    border-top: 2px solid;
-    width: min(1200px, 50%);
-    margin: 20px auto;
-}
-
-h1 {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    justify-content: center;
-}
-
-h2 {
-    color: var(--darkLight);
-    font-family: Verdana, serif;
-    font-weight: normal;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    justify-content: center;
-}
-
-label {
-    color: var(--darkLight);
-}
-
-nav {
-    position: fixed;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: clamp(0.4rem, 1rem, 1.5rem);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(0.4rem, 2rem, 2rem);
-
-    border-radius: 16px;
-    border: 3px solid transparent;
-    background:
-            linear-gradient(#0e297a, #00ecff) padding-box,
-            conic-gradient(
-                    from var(--angle),
-                    var(--gradientAnimation5),
-                    var(--gradientAnimation6),
-                    var(--gradientAnimation7),
-                    var(--gradientAnimation8)
-            ) border-box;
-
-    animation: toolsBorderSpin 4s linear infinite;
-    z-index: 1000;
-}
-
-nav a,
-nav button {
-    color: var(--darkLight);
-    font-family: Verdana, serif;
-    font-weight: bolder;
-    text-decoration: none;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: clamp(0.9rem, 2vw, 1.5rem);
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-nav a:hover,
-nav button:hover {
-    transform: scale(1.2);
-}
-
-#home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#home h1 {
-    font-size: 4rem;
-    margin: 0;
-}
-
-#about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-#tools {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-#tools img {
-    flex: 0 0 clamp(3rem, 8vw, 6rem);
-    height: auto;
-    border-radius: 12px;
-}
-
-@property --angle {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-}
-
-#socials img,
-#tools img {
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 5px solid transparent;
-    background:
-            linear-gradient(#0000, #0000) padding-box,
-            conic-gradient(
-                    from var(--angle),
-                    var(--gradientAnimation1),
-                    var(--gradientAnimation2),
-                    var(--gradientAnimation3),
-                    var(--gradientAnimation4)
-            ) border-box;
-
-    animation: toolsBorderSpin 4s linear infinite;
-}
-
-@keyframes toolsBorderSpin {
-    to { --angle: 360deg; }
-}
-
-#socials img:hover {
-    cursor: pointer;
-    transform: scale(1.15);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-#userHealth, #result {
-    color: var(--darkLight);
-    font-family: Verdana, serif;
-    font-weight: normal;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    justify-content: center;
-}
-
-label {
-    color: var(--darkLight);
-    font-family: Verdana, serif;
-    font-weight: normal;
-    font-size: clamp(1rem, 2vw, 1.5rem);;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 :root {
     --darkLight: #000000;
     --buttonDarkLight: #000000;
@@ -248,7 +17,7 @@ label {
     --background-image: url("https://images.unsplash.com/photo-1435820876491-c2cb37e8e7ff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2hpdGUlMjBzbm93fGVufDB8fDB8fHww");
 }
 
-.lightmode{
+.lightmode {
     --darkLight: #ffffff;
     --buttonDarkLight: #ffffff;
     --gradientName1: rgb(0, 236, 255);
@@ -265,4 +34,246 @@ label {
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
     --background-image: url("./../imgs/moon.jpg");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding-bottom: 30vh;
+    font-family: Verdana, serif;
+}
+
+.highlight {
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.golden {
+    background: linear-gradient(var(--gradientName3), var(--gradientName4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+h1 {
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+h2, label, #userHealth, #result {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #0f0f0f;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loader.hidden { opacity: 0; visibility: hidden; }
+
+#loaderText {
+    font-size: 3rem;
+    display: flex;
+    gap: 5px;
+}
+
+#loaderText span {
+    color: #0e297a;
+    opacity: 0;
+    animation: glow 2.5s infinite;
+}
+
+#loaderText span:nth-child(1) { animation-delay: 0s; }
+#loaderText span:nth-child(2) { animation-delay: 0.1s; }
+#loaderText span:nth-child(3) { animation-delay: 0.2s; }
+#loaderText span:nth-child(4) { animation-delay: 0.3s; }
+#loaderText span:nth-child(5) { animation-delay: 0.4s; }
+#loaderText span:nth-child(6) { animation-delay: 0.5s; }
+#loaderText span:nth-child(7) { animation-delay: 0.6s; }
+#loaderText span:nth-child(8) { animation-delay: 0.7s; }
+#loaderText span:nth-child(9) { animation-delay: 0.8s; }
+#loaderText span:nth-child(10){ animation-delay: 0.9s; }
+
+@keyframes glow {
+    0%, 100% { opacity: 0; text-shadow: 0 0 5px #0e297a; }
+    50% { opacity: 1; text-shadow: 0 0 20px #0e297a, 0 0 40px #0e297a; }
+}
+
+.spinner {
+    margin-top: 20px;
+    width: 40px; height: 40px;
+    border: 5px solid #020202;
+    border-top: 5px solid #0e297a;
+    border-radius: 50%;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+nav {
+    position: fixed;
+    bottom: 5%; left: 50%;
+    transform: translateX(-50%);
+    padding: clamp(0.3rem, 0.8rem, 1.3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.3rem, 1.6rem, 1.6rem);
+    border-radius: 16px;
+    border: 3px solid transparent;
+    background:
+            linear-gradient(#0e297a, #00ecff) padding-box,
+            conic-gradient(from var(--angle),
+            var(--gradientAnimation5),
+            var(--gradientAnimation6),
+            var(--gradientAnimation7),
+            var(--gradientAnimation8)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+    z-index: 1000;
+}
+
+nav a, nav button {
+    color: var(--darkLight);
+    font-weight: bolder;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: clamp(0.7rem, 1.7vw, 1.6rem);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav button:hover { transform: scale(1.2); }
+
+#home, #tools, #socials, #languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+#home { min-height: 100vh; }
+#home h1 { font-size: 4rem; margin: 0; }
+
+#about {
+    min-height: 50vh;
+    display: block;
+    padding: 30vh 12vw;
+    text-align: center;
+}
+
+#socials {min-height: 65vh;}
+#tools { min-height: 60vh; }
+#numbers {min-height: 40vh; }
+
+#tools img {
+    flex: 0 0 clamp(5rem, 10vw, 8rem);
+    height: auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    background: linear-gradient(#0000,#0000) padding-box,
+    conic-gradient(from var(--angle),
+            var(--gradientAnimation1),
+            var(--gradientAnimation2),
+            var(--gradientAnimation3),
+            var(--gradientAnimation4)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+}
+
+#socials .socials-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+#socials .socials-title {
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin: 0;
+}
+
+#socials .myLinks {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#socials img {
+    display: block;
+    width: clamp(5rem, 10vw, 8rem);
+    height: auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    background: linear-gradient(#0000,#0000) padding-box,
+    conic-gradient(from var(--angle),
+            var(--gradientAnimation1),
+            var(--gradientAnimation2),
+            var(--gradientAnimation3),
+            var(--gradientAnimation4)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+    transition: transform .2s ease, opacity .2s ease;
+}
+#socials img:hover { transform: scale(1.15); cursor: pointer; }
+
+
+
+#languages img {
+    width: clamp(4rem, 9vw, 7rem); height: auto;
+}
+
+input {
+    border-radius: 16px;
+    border: 4px solid transparent;
+    background:
+            linear-gradient(#ffffff, #ffffff) padding-box,
+            conic-gradient(from var(--angle),
+            var(--gradientAnimation1),
+            var(--gradientAnimation2),
+            var(--gradientAnimation3),
+            var(--gradientAnimation4)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+    z-index: 1000;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes toolsBorderSpin {
+    to { --angle: 360deg; }
 }
