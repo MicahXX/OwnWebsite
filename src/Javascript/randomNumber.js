@@ -47,7 +47,6 @@ actionBtn.addEventListener("click", function handleClick() {
         userHealthDiv.textContent = "";
         resultDiv.textContent = "You lost! The number was " + secretNumber + ".";
         lostSound.play();
-
         actionBtn.value = "Retry";
     }
 });
