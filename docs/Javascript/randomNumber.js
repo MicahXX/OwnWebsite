@@ -38,15 +38,15 @@ actionBtn.addEventListener("click", function handleClick() {
         actionBtn.value = "Again";
     } else if (userHealth > 0) {
         userHealth--;
-        resultDiv.textContent = "You guessed the wrong number....";
-        userHealthDiv.textContent = "Lives left: " + userHealth;
-        wrongSound.play();
-    }
-
-    if (userHealth === 0) {
-        userHealthDiv.textContent = "";
-        resultDiv.textContent = "You lost! The number was " + secretNumber + ".";
-        lostSound.play();
-        actionBtn.value = "Retry";
+        if (userHealth === 0) {
+            userHealthDiv.textContent = "";
+            resultDiv.textContent = "You lost! The number was " + secretNumber + ".";
+            lostSound.play();
+            actionBtn.value = "Retry";
+        } else {
+            resultDiv.textContent = "You guessed the wrong number....";
+            userHealthDiv.textContent = "Lives left: " + userHealth;
+            wrongSound.play();
+        }
     }
 });
