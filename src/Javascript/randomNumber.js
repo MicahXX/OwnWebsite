@@ -38,6 +38,7 @@ actionBtn.addEventListener("click", function handleClick() {
         actionBtn.value = "Again";
     } else if (userHealth > 0) {
         userHealth--;
+
         if (userHealth === 0) {
             userHealthDiv.textContent = "";
             resultDiv.textContent = "You lost! The number was " + secretNumber + ".";
