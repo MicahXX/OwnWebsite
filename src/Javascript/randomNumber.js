@@ -33,7 +33,7 @@ actionBtn.addEventListener("click", function handleClick() {
     } else if (guess === secretNumber && userHealth > 0) {
         resultDiv.textContent = "You guessed the correct number!!!";
         userHealthDiv.textContent = "";
-        correctSound.play();
+        correctSound.play()
 
         actionBtn.value = "Again";
     } else if (userHealth > 0) {
