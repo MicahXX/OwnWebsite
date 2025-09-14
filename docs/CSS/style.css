@@ -190,7 +190,7 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
     text-align: center;
 }
 
-#tools { min-height: 20vh; padding-top: 20vh;}
+#tools { min-height: 20vh; padding-top: 10vh;}
 #numbers {min-height: 75vh; padding-top: 30vh; }
 
 #tools img {
