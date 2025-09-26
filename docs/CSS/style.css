@@ -65,6 +65,13 @@ body {
     color: transparent;
 }
 
+.gray {
+    background: grey;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 h1 {
     background: linear-gradient(var(--gradientName1), var(--gradientName2));
     -webkit-background-clip: text;
@@ -191,7 +198,7 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
 }
 
 #tools { min-height: 20vh; padding-top: 10vh;}
-#numbers {min-height: 75vh; padding-top: 30vh; }
+#numbers {min-height: 75vh; padding-top: 35vh; }
 
 #tools img {
     flex: 0 0 clamp(5rem, 10vw, 8rem);
