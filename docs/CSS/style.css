@@ -355,14 +355,17 @@ input[type="submit"]:hover {
 }
 
 #typing {
-    font-size: 4rem;
-    margin: 0;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin: 0 auto;
     display: inline-block;
     border-right: 3px solid var(--darkLight);
-    white-space: nowrap;
-    overflow: hidden;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
     animation: blinkCursor 0.8s steps(2) infinite;
+    max-width: 90vw;
 }
+
 
 @keyframes blinkCursor {
     0%, 50% { border-color: var(--darkLight); }
