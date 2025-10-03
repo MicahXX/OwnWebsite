@@ -40,4 +40,3 @@ window.addEventListener("load", () => {
     const remaining = Math.max(0, minTime - elapsed);
     setTimeout(hideLoader, remaining);
 });
-
