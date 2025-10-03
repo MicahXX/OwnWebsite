@@ -1,5 +1,6 @@
 :root {
     --darkLight: #000000;
+    --whiteLight: #ffffff;
     --buttonDarkLight: #000000;
     --gradientName1: #0e297a;
     --gradientName2: #00ecff;
@@ -19,6 +20,7 @@
 
 .lightmode {
     --darkLight: #ffffff;
+    --whiteLight: #000000;
     --buttonDarkLight: #ffffff;
     --gradientName1: rgb(0, 236, 255);
     --gradientName2: rgb(14, 41, 122);
@@ -95,7 +97,7 @@ h5 {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background: #0f0f0f;
+    background: var(--whiteLight);
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     z-index: 9999;
@@ -111,7 +113,10 @@ h5 {
 }
 
 #loaderText span {
-    color: #0e297a;
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     opacity: 0;
     animation: glow 2.5s infinite;
 }
@@ -126,6 +131,7 @@ h5 {
 #loaderText span:nth-child(8) { animation-delay: 0.7s; }
 #loaderText span:nth-child(9) { animation-delay: 0.8s; }
 #loaderText span:nth-child(10){ animation-delay: 0.9s; }
+#loaderText span:nth-child(11){ animation-delay: 1s; }
 
 @keyframes glow {
     0%, 100% { opacity: 0; text-shadow: 0 0 5px #0e297a; }
@@ -133,12 +139,10 @@ h5 {
 }
 
 .spinner {
-    margin-top: 20px;
-    width: 40px; height: 40px;
-    border: 5px solid #020202;
-    border-top: 5px solid #0e297a;
+    margin-top: 30px;
+    width: 50px; height: 50px;
     border-radius: 50%;
-    animation: spin 2.5s linear infinite;
+    animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin { 100% { transform: rotate(360deg); } }
@@ -347,3 +351,19 @@ input[type="submit"]:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--gradientName2);
 }
+
+#typing {
+    font-size: 4rem;
+    margin: 0;
+    display: inline-block;
+    border-right: 3px solid var(--darkLight);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 0.8s steps(2) infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 50% { border-color: var(--darkLight); }
+    51%, 100% { border-color: transparent; }
+}
+
