@@ -28,9 +28,10 @@
     <h1 id="typing">MicahCode</h1>
 </section>
 
+
 <section id="about">
     <h1>About</h1>
-    <h2>
+    <h2 class="scroll-hidden fade-left">
         Heyo! I'm a 15-year-old student from Austria, currently studying
         <span class="highlight">Software Engineering</span> at an HTL (Higher Technical School).
         I’m passionate about exploring <span class="highlight">new technologies</span>,
@@ -42,15 +43,17 @@
 </section>
 
 <section id="tools">
-    <div class="github-cards">
+    <div>
         <h1>TOOLS</h1>
-        <img src="https://camo.githubusercontent.com/c6f6a65d50421969c3c3a3006f48ad43a5359cadfe2ccfa4a8077974ebce74df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d6963616858582673686f775f69636f6e733d74727565267468656d653d746f6b796f6e69676874" alt="Stats" width="395">
-        <img src="https://camo.githubusercontent.com/2d124fcd1dec1934f59b55c30b8b4be6ac3090391bb32ad3edd9ce66f4fcc1df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d696361685858266c61796f75743d636f6d70616374267468656d653d746f6b796f6e69676874" alt="Stats" width="300">
+        <div class="github-cards scroll-hidden zoom-in">
+            <img src="https://camo.githubusercontent.com/c6f6a65d50421969c3c3a3006f48ad43a5359cadfe2ccfa4a8077974ebce74df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d6963616858582673686f775f69636f6e733d74727565267468656d653d746f6b796f6e69676874" alt="Stats" width="395">
+            <img src="https://camo.githubusercontent.com/2d124fcd1dec1934f59b55c30b8b4be6ac3090391bb32ad3edd9ce66f4fcc1df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d696361685858266c61796f75743d636f6d70616374267468656d653d746f6b796f6e69676874" alt="Stats" width="300">
+        </div>
     </div>
 </section>
 
 <section id="languages">
-    <div class="codingLanguages">
+    <div class="codingLanguages scroll-hidden fade-up">
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-java-icon-svg-download-png-1174953.png" alt="Java">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
         <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
@@ -63,24 +66,25 @@
 
 <section id="numbers">
     <h1>GAME</h1>
-    <label for="number">Enter Random Number(0-10): </label>
-    <input type="text" id="number" name="number"><br>
-    <input type="submit" id="submitBtn" value="Result">
-    <label for="userHealth"></label>
-    <div id="result"></div>
-    <div id="userHealth"><h2>Lives left: 3</h2></div>
+    <div class="scroll-hidden fade-right">
+        <label for="number">Enter Random Number(0-10): </label>
+        <input type="text" id="number" name="number"><br>
+        <input type="submit" id="submitBtn" value="Result">
+        <div id="result"></div>
+        <div id="userHealth"><h2>Lives left: 3</h2></div>
+        <button id="retryBtn" style="display: none;">Retry</button>
 
-    <button id="retryBtn" style="display: none;">Retry</button>
-
-    <audio id="correctSound" src="sounds/correct-choice-43861.mp3" preload="auto"></audio>
-    <audio id="wrongSound" src="sounds/error-warning-login-denied-132113.mp3" preload="auto"></audio>
-    <audio id="lostSound" src="sounds/080205_life-lost-game-over-89697.mp3" preload="auto"></audio>
+        <audio id="correctSound" src="sounds/correct-choice-43861.mp3" preload="auto"></audio>
+        <audio id="wrongSound" src="sounds/error-warning-login-denied-132113.mp3" preload="auto"></audio>
+        <audio id="lostSound" src="sounds/080205_life-lost-game-over-89697.mp3" preload="auto"></audio>
+    </div>
 </section>
 
+
 <section id="socials">
-    <div class="socials-inner">
+    <div>
         <h1 class="socials-title">SOCIALS</h1>
-        <div class="myLinks">
+        <div class="myLinks scroll-hidden fade-up">
             <a href="https://www.youtube.com/@MizkulMC">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/YouTube_play_button_square_%282013-2017%29.svg/2048px-YouTube_play_button_square_%282013-2017%29.svg.png" alt="YouTube">
             </a>
@@ -93,7 +97,7 @@
         </div>
     </div>
 </section>
-<h5><span class = golden>Contact Me!</span></h5>
+<h5 class="scroll-hidden fade-up"><span class = golden>Contact Me!</span></h5>
 
 <section id="copyright">
     <h2><span class = gray>© 2025 Micah Code. All rights reserved.</span></h2>
@@ -103,5 +107,6 @@
 <script src="Javascript/typeName.js"></script>
 <script src="Javascript/randomNumber.js"></script>
 <script src="Javascript/startingscreen.js"></script>
+<script src="Javascript/scrollAnimation.js"></script>
 </body>
 </html>
