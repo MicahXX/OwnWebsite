@@ -1,4 +1,4 @@
-const words = ["Micahaa", "Mizkul", "Coder", "Minecraft Plugins"];
+const words = ["Micah", "Mizkul", "Coder", "Minecraft Plugins"];
 const typingElement = document.getElementById("typing");
 
 let wordIndex = 0;
