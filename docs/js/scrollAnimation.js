@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries) => {
         if (navScrollActive) return;
         if (entry.isIntersecting) playElement(entry.target, index * scrollDelay);
     });
-}, { threshold: 0.25 });
+}, { threshold: 0.8 });
 
 function playElement(el, delay = 0) {
     if (playedSections.has(el)) return;
