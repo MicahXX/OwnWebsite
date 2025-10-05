@@ -4,7 +4,7 @@ const lightmodeButton = document.getElementById('lightmode');
 const enableLightmode = () => {
     document.body.classList.add('lightmode');
     localStorage.setItem('lightmode', 'active');
-    lightmodeButton.textContent = "🔆";
+    lightmodeButton.textContent = "☀︎";
 }
 
 const disableLightmode = () => {
