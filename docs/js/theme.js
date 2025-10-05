@@ -10,7 +10,7 @@ const enableLightmode = () => {
 const disableLightmode = () => {
     document.body.classList.remove('lightmode');
     localStorage.setItem('lightmode', null);
-    lightmodeButton.textContent = "🌑";
+    lightmodeButton.textContent = "⏾";
 }
 
 if(lightmode === "active") {
