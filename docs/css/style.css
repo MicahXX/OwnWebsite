@@ -267,8 +267,6 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
 }
 #socials img:hover { transform: scale(1.15); cursor: pointer; }
 
-
-
 #languages img {
     width: clamp(4rem, 9vw, 7rem); height: auto;
     padding: 15px 0.6rem 0.3rem;
@@ -476,3 +474,30 @@ body.lightmode #lightmode {
                 0 0 30px rgba(255, 200, 0, 0.6);
     }
 }
+
+#support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+}
+
+#support img {
+    margin-top: 10px;
+    display: block;
+    width: clamp(8rem, 15vw, 11rem);
+    height: auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    background: linear-gradient(#0000,#0000) padding-box,
+    conic-gradient(from var(--angle),
+            var(--gradientAnimation1),
+            var(--gradientAnimation2),
+            var(--gradientAnimation3),
+            var(--gradientAnimation4)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+    transition: transform .2s ease, opacity .2s ease;
+}
+#support img:hover { transform: scale(1.15); cursor: pointer; }
