@@ -289,9 +289,7 @@ body.lightmode .tool-badge {
     text-align: center;
 }
 
-#copyright {padding-bottom: 5vh;}
-
-
+#copyright {padding-bottom: 5vh; padding-top: 5vh;}
 
 #socials .socials-inner {
     display: flex;
