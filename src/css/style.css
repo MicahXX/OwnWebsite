@@ -194,12 +194,89 @@ nav a, nav button {
 
 nav a:hover, nav button:hover { transform: scale(1.2); }
 
-#home, #tools, #socials, #languages {
+#home, #socials, #languages {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+}
+
+#tools {
+    min-height: 50vh;
+    padding: 30vh 12vw;
+    text-align: center;
+}
+
+.tools-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 16px);
+    margin-bottom: 30px;
+}
+
+.tool-badge {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 1vw, 10px);
+    height: clamp(40px, 5vw, 60px);
+    min-width: clamp(90px, 12vw, 130px);
+    padding: 0 clamp(12px, 2vw, 25px);
+    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.85);
+    border: 2px solid transparent;
+    color: var(--darkLight);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    text-transform: uppercase;
+    cursor: default;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.tool-badge img {
+    width: clamp(18px, 2.2vw, 26px);
+    height: clamp(18px, 2.2vw, 26px);
+    object-fit: contain;
+}
+
+.tool-badge::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    filter: blur(6px);
+}
+
+.tool-badge:hover::before {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: blur(10px);
+}
+
+.tool-badge:hover {
+    transform: scale(1.05) translateY(-4px);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    animation: badgeGlow 1.2s infinite ease-in-out;
+}
+
+@keyframes badgeGlow {
+    0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+    50% { box-shadow: 0 0 18px rgba(255,255,255,0.25); }
+}
+
+body.lightmode .tool-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
 #home { min-height: 100vh; }
@@ -212,27 +289,9 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
     text-align: center;
 }
 
-#tools { min-height: 20vh; padding-top: 10vh; padding-bottom: 5vh;}
-#numbers {min-height: 75vh; padding-top: 30vh;}
 #copyright {padding-bottom: 5vh;}
 
-#tools img {
-    margin-top: 5vh;
-    display: inline-block;
-    width: clamp(10rem, 20vw, 20rem);
-    height: auto;
-    border-radius: 12px;
-    box-sizing: border-box;
-    border: 3px solid transparent;
-    background: linear-gradient(#0000,#0000) padding-box,
-    conic-gradient(from var(--angle),
-            var(--gradientAnimation1),
-            var(--gradientAnimation2),
-            var(--gradientAnimation3),
-            var(--gradientAnimation4)) border-box;
-    animation: toolsBorderSpin 4s linear infinite;
-    transition: transform .2s ease, opacity .2s ease;
-}
+
 
 #socials .socials-inner {
     display: flex;
