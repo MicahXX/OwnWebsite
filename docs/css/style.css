@@ -85,8 +85,9 @@ h1 {
 h2, label, #userHealth, #result {
     color: var(--darkLight);
     font-weight: normal;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 1.7vw, 1.4rem);
 }
+
 h5 {
     color: var(--darkLight);
     font-weight: normal;
@@ -104,7 +105,11 @@ h5 {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-#loader.hidden { opacity: 0; visibility: hidden; }
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
 #loaderText {
     font-size: 3rem;
@@ -474,30 +479,3 @@ body.lightmode #lightmode {
                 0 0 30px rgba(255, 200, 0, 0.6);
     }
 }
-
-#support {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: .5rem;
-}
-
-#support img {
-    margin-top: 10px;
-    display: block;
-    width: clamp(8rem, 15vw, 11rem);
-    height: auto;
-    border-radius: 12px;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    background: linear-gradient(#0000,#0000) padding-box,
-    conic-gradient(from var(--angle),
-            var(--gradientAnimation1),
-            var(--gradientAnimation2),
-            var(--gradientAnimation3),
-            var(--gradientAnimation4)) border-box;
-    animation: toolsBorderSpin 4s linear infinite;
-    transition: transform .2s ease, opacity .2s ease;
-}
-#support img:hover { transform: scale(1.15); cursor: pointer; }
