@@ -6,6 +6,8 @@
     <title>MicahCode</title>
     <link rel="icon" type="image/png" href="imgs/Star.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
 <div id="loader">
@@ -22,7 +24,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#tools">Tools</a>
-    <a href="#numbers">Game</a>
+    <a href="#projects">Projects</a>
     <a href="#socials">Socials</a>
 </nav>
 
@@ -48,8 +50,10 @@
     <div>
         <h1>TOOLS</h1>
         <div class="github-cards scroll-hidden zoom-in">
-            <img src="https://camo.githubusercontent.com/2d124fcd1dec1934f59b55c30b8b4be6ac3090391bb32ad3edd9ce66f4fcc1df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d696361685858266c61796f75743d636f6d70616374267468656d653d746f6b796f6e69676874" alt="Stats" width="300">
-            <img src="https://camo.githubusercontent.com/c6f6a65d50421969c3c3a3006f48ad43a5359cadfe2ccfa4a8077974ebce74df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d6963616858582673686f775f69636f6e733d74727565267468656d653d746f6b796f6e69676874" alt="Stats" width="395" style="position: relative; bottom:20px" >
+            <img src="https://camo.githubusercontent.com/2d124fcd1dec1934f59b55c30b8b4be6ac3090391bb32ad3edd9ce66f4fcc1df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d4d696361685858266c61796f75743d636f6d70616374267468656d653d746f6b796f6e69676874"
+                 alt="Stats" width="300">
+            <img src="https://camo.githubusercontent.com/c6f6a65d50421969c3c3a3006f48ad43a5359cadfe2ccfa4a8077974ebce74df/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d4d6963616858582673686f775f69636f6e733d74727565267468656d653d746f6b796f6e69676874"
+                 alt="Stats" width="395" style="position: relative; bottom:20px">
         </div>
     </div>
 </section>
@@ -57,61 +61,90 @@
 <section id="languages">
     <div class="codingLanguages scroll-hidden fade-up">
         <img src="https://cdn.iconscout.com/icon/free/png-256/free-java-icon-svg-download-png-1174953.png" alt="Java">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
-        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+             alt="Python">
+        <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+             alt="JavaScript">
         <img src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-html-5-icon.png" alt="html">
         <img src="imgs/css2.png" alt="css"><br>
-        <img src="https://cdn.iconscout.com/icon/free/png-256/free-aws-logo-icon-svg-download-png-1583149.png" alt="aws">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-aws-logo-icon-svg-download-png-1583149.png"
+             alt="aws">
         <img src="https://images.icon-icons.com/2415/PNG/512/typescript_original_logo_icon_146317.png" alt="TypeScript">
     </div>
 </section>
 
-<section id="numbers">
-    <h1>GAME</h1>
-    <div class="scroll-hidden fade-right">
-        <label for="number">Enter Random Number(0-10): </label>
-        <input type="text" id="number" name="number"><br>
-        <input type="submit" id="submitBtn" value="Result">
-        <div id="result"></div>
-        <div id="userHealth"><h2>Lives left: 3</h2></div>
-        <button id="retryBtn" style="display: none;">Retry</button>
+<section id="projects">
+    <h1 class="scroll-hidden fade-up">PROJECTS</h1>
 
-        <audio id="correctSound" src="sounds/correct-choice-43861.mp3" preload="auto"></audio>
-        <audio id="wrongSound" src="sounds/error-warning-login-denied-132113.mp3" preload="auto"></audio>
-        <audio id="lostSound" src="sounds/080205_life-lost-game-over-89697.mp3" preload="auto"></audio>
-    </div>
-</section>
+    <div class="splide scroll-hidden fade-right" aria-label="My Projects">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img class="bg"
+                         src="https://storage.ko-fi.com/cdn/useruploads/display/0f1ef6e7-1a43-48f1-a498-579e6a3c4a2f_bild_2025-10-31_173151456.png"
+                         alt="67‑Negator Background">
+                    <div class="overlay">
+                        <img class="icon"
+                             src="imgs/error67_100x100.png"
+                             alt="Project Icon">
+                        <h3>67‑Negator</h3>
+                        <p>A small Discord moderation bot that purposefully deletes any message containing "67" or "six seven".</p>
+                        <a href="https://github.com/MicahXX/67-Negator" target="_blank">View on GitHub</a>
+                    </div>
+                </li>
 
-
-<section id="socials">
-    <div>
-        <h1 class="socials-title">SOCIALS</h1>
-        <div class="myLinks scroll-hidden zoom-in">
-            <a href="https://www.youtube.com/@MizkulMC">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/YouTube_play_button_square_%282013-2017%29.svg/2048px-YouTube_play_button_square_%282013-2017%29.svg.png" alt="YouTube">
-            </a>
-            <a href="https://github.com/MicahXX">
-                <img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" alt="GitHub">
-            </a>
-            <a href="https://discord.gg/94xPZeD9tP">
-                <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg" alt="Discord">
-            </a>
-            <a href="contact.html">
-                <img src="https://t3.ftcdn.net/jpg/08/06/26/50/360_F_806265046_zkPvb1uafqbsF0on5DpKr46YNOZApuO2.jpg" alt="Email">
-            </a>
+                <li class="splide__slide">
+                    <img class="bg"
+                         src="https://cdn.modrinth.com/data/lgpoZ6Lc/images/848c02833a2932443ab85b2fa2b6a11bc78152c3.png" alt="Minecraft">"
+                         alt="PointHunt Background">
+                    <div class="overlay">
+                        <img class="icon"
+                             src="imgs/Minecraft.png"
+                             alt="Project Icon">
+                        <h3>Paper Minigame Plugin</h3>
+                        <p>A small, fun Minecraft Paper plugin (1.21.8) that turns mining and mob kills into a points-based minigame.
+                            Features a configurable timer, leaderboard, and automatic server shutdown when the game ends.</p>
+                        <a href="https://github.com/MicahXX/PointHunt" target="_blank">View on GitHub</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section id="copyright">
-    <h2><span class = gray>© 2025 Micah Code. All rights reserved.</span></h2>
-</section>
+    <section id="socials">
+        <div>
+            <h1 class="socials-title">SOCIALS</h1>
+            <div class="myLinks scroll-hidden zoom-in">
+                <a href="https://www.youtube.com/@MizkulMC">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/YouTube_play_button_square_%282013-2017%29.svg/2048px-YouTube_play_button_square_%282013-2017%29.svg.png"
+                         alt="YouTube">
+                </a>
+                <a href="https://github.com/MicahXX">
+                    <img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" alt="GitHub">
+                </a>
+                <a href="https://discord.gg/94xPZeD9tP">
+                    <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg"
+                         alt="Discord">
+                </a>
+                <a href="contact.html">
+                    <img src="https://t3.ftcdn.net/jpg/08/06/26/50/360_F_806265046_zkPvb1uafqbsF0on5DpKr46YNOZApuO2.jpg"
+                         alt="Email">
+                </a>
+            </div>
+        </div>
+    </section>
 
-<script src="js/theme.js"></script>
-<script src="js/typingName.js"></script>
-<script src="js/game.js"></script>
-<script src="js/startingScreen.js"></script>
-<script src="js/scrollAnimation.js"></script>
+    <section id="copyright">
+        <h2><span class=gray>© 2025 Micah Code. All rights reserved.</span></h2>
+    </section>
+
+    <script src="js/projectSlider.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/typingName.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/startingScreen.js"></script>
+    <script src="js/scrollAnimation.js"></script>
 </body>
 </html>
 
