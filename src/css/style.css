@@ -212,8 +212,9 @@ nav a:hover, nav button:hover { transform: scale(1.2); }
     text-align: center;
 }
 
-#tools { min-height: 20vh; padding-top: 10vh;}
+#tools { min-height: 20vh; padding-top: 10vh; padding-bottom: 5vh;}
 #numbers {min-height: 75vh; padding-top: 30vh;}
+#copyright {padding-bottom: 5vh;}
 
 #tools img {
     margin-top: 5vh;
@@ -548,15 +549,17 @@ body.lightmode #lightmode {
 
 .overlay h2,
 .overlay p,
+.overlay h3,
 .overlay a {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
 }
 
 .splide__slide.is-active .overlay img.icon,
 .splide__slide.is-active .overlay h2,
 .splide__slide.is-active .overlay p,
+.splide__slide.is-active .overlay h3,
 .splide__slide.is-active .overlay a {
     opacity: 1;
     transform: translateY(0);
