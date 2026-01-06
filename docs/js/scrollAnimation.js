@@ -2,13 +2,23 @@ const playedSections = new Set();
 
 const scrollDelay = 150;
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (playedSections.has(entry.target)) return;
-        if (navScrollActive) return;
-        if (entry.isIntersecting) playElement(entry.target, index * scrollDelay);
-    });
-}, { threshold: 0.8 });
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (playedSections.has(entry.target)) return;
+            if (navScrollActive) return;
+
+            if (entry.isIntersecting) {
+                playElement(entry.target);
+            }
+        });
+    },
+    {
+        root: null,
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0
+    }
+);
 
 function playElement(el, delay = 0) {
     if (playedSections.has(el)) return;
