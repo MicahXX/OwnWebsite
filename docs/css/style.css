@@ -207,7 +207,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #home, #socials, #languages {
@@ -223,14 +222,13 @@ section {
 
 .tools-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); /* smaller min width for shrinking */
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     gap: clamp(8px, 1.5vw, 16px);
     row-gap: clamp(12px, 1.5vw, 16px);
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* Individual tool badges */
 .tool-badge {
     display: flex;
     align-items: center;
@@ -248,22 +246,19 @@ section {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Tool icon */
 .tool-badge img {
     width: clamp(18px, 4vw, 24px);
     height: clamp(18px, 4vw, 24px);
     object-fit: contain;
 }
 
-/* Hover effect only on devices that support hover */
 @media (hover: hover) and (min-width: 200px) {
     .tool-badge:hover {
-        transform: translateY(-3px); /* safer than scale to prevent grid glitching */
+        transform: translateY(-3px);
         box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
 }
 
-/* Lightmode adjustments */
 body.lightmode .tool-badge {
     background: rgba(255, 255, 255, 0.9);
     color: #000;
@@ -554,7 +549,6 @@ body.lightmode #lightmode {
     }
 }
 
-/* Projects Section */
 #projects {
     text-align: center;
 }
@@ -571,7 +565,7 @@ body.lightmode #lightmode {
 
 .splide__slide {
     position: relative;
-    height: min(500px, 50vh); /* shrink on smaller screens */
+    height: min(500px, 50vh);
     overflow: hidden;
     transition: height 0.3s ease;
 }
@@ -604,7 +598,7 @@ body.lightmode #lightmode {
 
 .overlay img.icon {
     display: inline-block;
-    width: clamp(60px, 10vw, 150px); /* responsive icon size */
+    width: clamp(60px, 10vw, 150px);
     height: auto;
     object-fit: contain;
     pointer-events: auto;
@@ -668,7 +662,6 @@ body.lightmode #lightmode {
     }
 }
 
-/* Small screen adjustments */
 @media (max-width: 600px) {
     .splide {
         width: 98%;
