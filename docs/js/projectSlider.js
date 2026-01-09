@@ -2,7 +2,7 @@ const splide = new Splide('.splide', {
     type: 'loop',
     perPage: 1,
     autoplay: true,
-    interval: 900000,
+    interval: 4000,
     pauseOnHover: true,
     arrows: true,
     pagination: true,
