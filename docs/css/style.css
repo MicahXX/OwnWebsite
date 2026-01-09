@@ -294,13 +294,10 @@ body.lightmode .tool-badge {
     text-align: center;
 }
 
-#copyright {padding-bottom: 5vh; padding-top: 5vh;}
-
 #socials .socials-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
     text-align: center;
     padding: 1rem;
 }
@@ -311,19 +308,17 @@ body.lightmode .tool-badge {
     background-clip: text;
     color: transparent;
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    margin: 0;
 }
 
 #socials .myLinks {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 #socials img {
-    margin-top: 20px;
     display: block;
     width: clamp(5rem, 10vw, 8rem);
     height: auto;
@@ -688,4 +683,9 @@ body.lightmode #lightmode {
         font-size: clamp(0.55rem, 3vw, 0.7rem);
         padding: clamp(6px, 2vw, 10px) clamp(12px, 4vw, 20px);
     }
+}
+
+.made-with-love {
+    color: var(--darkLight);
+    font-size: 1.1rem;
 }
