@@ -454,10 +454,6 @@ input[type="submit"]:hover {
 .scroll-hidden {
     opacity: 0;
     filter: blur(5px);
-    transition:
-            opacity 0.8s ease,
-            transform 0.8s ease,
-            filter 0.8s ease;
 }
 
 .fade-up.scroll-show {
