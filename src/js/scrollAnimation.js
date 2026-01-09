@@ -44,6 +44,10 @@ const navGroups = {
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
+
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
         const targetId = link.getAttribute("href").substring(1);
         const section = document.getElementById(targetId);
         if (!section) return;
@@ -81,3 +85,30 @@ document.querySelectorAll("nav a").forEach(link => {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
+
+const navLinks = document.querySelectorAll("nav a");
+const sections = document.querySelectorAll("section");
+
+function updateActiveNav() {
+    if (navScrollActive) return;
+
+    let currentSection = "home";
+
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.4) {
+            currentSection = section.id;
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);

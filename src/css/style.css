@@ -6,6 +6,8 @@
     --gradientName2: rgb(14, 41, 122);
     --gradientName3: rgb(0, 236, 255);
     --gradientName4: rgba(255, 145, 0, 0.48);
+    --gradientName5: rgba(42, 223, 255, 0.78);
+    --gradientName6: rgba(0, 52, 255, 0.78);
     --gradientAnimation1: #000000;
     --gradientAnimation2: #000000;
     --gradientAnimation3: #000000;
@@ -179,6 +181,16 @@ nav {
     z-index: 1000;
 }
 
+nav a.active {
+    color: var(--gradientName5);
+    transform: scale(1.15);
+    text-shadow: 0 0 10px rgba(9, 106, 243, 0.48);
+}
+
+nav a:hover {
+    color: var(--gradientName5);
+}
+
 nav a, nav button {
     color: var(--darkLight);
     font-weight: bolder;
@@ -214,6 +226,13 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    color: var(--darkLight);
+    opacity: 0.85;
+    letter-spacing: 0.05em;
 }
 
 #tools {
@@ -425,19 +444,17 @@ input[type="submit"]:hover {
 
 #typing {
     font-size: clamp(2rem, 6vw, 4rem);
-    margin: 0 auto;
-    display: inline-block;
-    border-right: 3px solid var(--darkLight);
-    white-space: normal;
-    overflow-wrap: break-word;
-    text-align: center;
+    font-weight: bold;
+    color: var(--gradientName5);
+    border-right: 2px solid var(--gradientName5);
+    padding-right: 2px;
+    white-space: nowrap;
+    overflow: hidden;
     animation: blinkCursor 0.8s steps(2) infinite;
-    max-width: 90vw;
 }
 
-
 @keyframes blinkCursor {
-    0%, 50% { border-color: var(--darkLight); }
+    0%, 50% { border-color: var(--gradientName5); }
     51%, 100% { border-color: transparent; }
 }
 
