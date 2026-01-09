@@ -194,7 +194,7 @@ nav a, nav button {
 nav a:hover, nav button:hover { transform: scale(1.2); }
 
 section {
-    min-height: 100vh;
+    min-height: 90vh;
     display: grid;
     place-items: center;
     padding-inline: clamp(1rem, 6vw, 12vw);
