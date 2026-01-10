@@ -54,21 +54,7 @@ body {
     font-family: Verdana, serif;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
-}
-
-
+/* Style colors */
 .highlight {
     background: linear-gradient(var(--gradientName1), var(--gradientName2));
     -webkit-background-clip: text;
@@ -116,13 +102,15 @@ h5 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
+/* Loading Animation at the start */
 #loader {
     position: fixed;
     top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 100vw; height: 100vh;
     background: var(--whiteLight);
     display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
@@ -174,6 +162,7 @@ h5 {
 
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
+/* Navbar */
 nav {
     position: fixed;
     bottom: 5%; left: 50%;
@@ -218,8 +207,11 @@ nav a, nav button {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover, nav button:hover { transform: scale(1.2); }
+nav a:hover, nav button:hover {
+    transform: scale(1.2);
+}
 
+/* Sections general css */
 section {
     min-height: 90vh;
     display: grid;
@@ -243,6 +235,23 @@ section {
     flex-wrap: wrap;
 }
 
+/* home */
+#home {
+    min-height: 100vh;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* about */
+#about {
+    text-align: center;
+}
+
+/* Tools */
 #tools {
     text-align: center;
 }
@@ -292,7 +301,7 @@ body.lightmode .tool-badge {
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-/* Extra small screens */
+/* Settings for smaller screens */
 @media (max-width: 400px) {
     .tools-wrapper {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -310,17 +319,7 @@ body.lightmode .tool-badge {
     }
 }
 
-#home {
-    min-height: 100vh;
-    align-items: center;
-}
-
-#home h1 { font-size: 4rem; margin: 0; }
-
-#about {
-    text-align: center;
-}
-
+/* Socials */
 #socials .socials-inner {
     display: flex;
     flex-direction: column;
@@ -361,25 +360,10 @@ body.lightmode .tool-badge {
     animation: toolsBorderSpin 4s linear infinite;
     transition: transform .2s ease, opacity .2s ease;
 }
-#socials img:hover { transform: scale(1.15); cursor: pointer; }
 
-#languages img {
-    width: clamp(4rem, 9vw, 7rem); height: auto;
-    padding: 15px 0.6rem 0.3rem;
-}
-
-input {
-    border-radius: 16px;
-    border: 4px solid transparent;
-    background:
-            linear-gradient(#ffffff, #ffffff) padding-box,
-            conic-gradient(from var(--angle),
-            var(--gradientAnimation1),
-            var(--gradientAnimation2),
-            var(--gradientAnimation3),
-            var(--gradientAnimation4)) border-box;
-    animation: toolsBorderSpin 4s linear infinite;
-    z-index: 1000;
+#socials img:hover {
+    transform: scale(1.15);
+    cursor: pointer;
 }
 
 @property --angle {
@@ -392,64 +376,7 @@ input {
     to { --angle: 360deg; }
 }
 
-label {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: var(--darkLight);
-    font-weight: normal;
-}
-
-#userHealth, #result {
-    color: var(--darkLight);
-    font-weight: normal;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-}
-
-#retryBtn {
-    font-size: 1.3rem;
-    padding: 0.4rem 0.8rem;
-    text-align: center;
-    color: var(--darkLight);
-    background: #ffffffcc;
-    border-radius: 12px;
-    border: 2px solid var(--gradientName1);
-    outline: none;
-    transition: 0.3s ease;
-}
-
-input[type="text"] {
-    font-size: 1.3rem;
-    padding: 0.8rem 1.6rem;
-    text-align: center;
-    color: var(--darkLight);
-    background: #ffffffcc;
-    border-radius: 12px;
-    border: 2px solid var(--gradientName1);
-    outline: none;
-    transition: 0.3s ease;
-}
-
-input[type="text"]:focus {
-    border-color: var(--gradientName2);
-    box-shadow: 0 0 10px var(--gradientName2);
-}
-
-input[type="submit"] {
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 0.8rem 1.6rem;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
-    color: #fff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-input[type="submit"]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--gradientName2);
-}
-
+/* Animations */
 #typing {
     font-size: clamp(2rem, 6vw, 4rem);
     font-weight: bold;
@@ -515,7 +442,6 @@ input[type="submit"]:hover {
     top: 1rem;
     right: 1rem;
     z-index: 1000;
-
     font-size: 2.5rem;
     background: none;
     border: none;
@@ -572,6 +498,7 @@ body.lightmode #lightmode {
     }
 }
 
+/* Projects */
 #projects {
     text-align: center;
 }
@@ -685,6 +612,7 @@ body.lightmode #lightmode {
     }
 }
 
+/* For mobile etc. */
 @media (max-width: 600px) {
     .splide {
         width: 98%;
@@ -713,7 +641,81 @@ body.lightmode #lightmode {
     }
 }
 
+/* ❤️ */
 .made-with-love {
     color: var(--darkLight);
     font-size: 1.1rem;
 }
+
+/* Had a game section, but removed it, but ill keep the css for fun */
+label {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--darkLight);
+    font-weight: normal;
+}
+
+#userHealth, #result {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#retryBtn {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    color: var(--darkLight);
+    background: #ffffffcc;
+    border-radius: 12px;
+    border: 2px solid var(--gradientName1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="text"] {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.6rem;
+    text-align: center;
+    color: var(--darkLight);
+    background: #ffffffcc;
+    border-radius: 12px;
+    border: 2px solid var(--gradientName1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--gradientName2);
+    box-shadow: 0 0 10px var(--gradientName2);
+}
+
+input[type="submit"] {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--gradientName2);
+}
+input {
+    border-radius: 16px;
+    border: 4px solid transparent;
+    background:
+            linear-gradient(#ffffff, #ffffff) padding-box,
+            conic-gradient(from var(--angle),
+            var(--gradientAnimation1),
+            var(--gradientAnimation2),
+            var(--gradientAnimation3),
+            var(--gradientAnimation4)) border-box;
+    animation: toolsBorderSpin 4s linear infinite;
+    z-index: 1000;
+}
+/* --------------------------------------------------- */
