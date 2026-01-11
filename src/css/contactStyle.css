@@ -334,7 +334,11 @@ input[type="submit"]:hover {
     margin: 2rem 0;
 }
 
-/* Contact form styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 .contact-form {
     width: 100%;
@@ -342,10 +346,16 @@ input[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    margin: auto;
+}
+
+.form-group {
+    width: 100%;
 }
 
 .form-group input,
 .form-group textarea {
+    text-align: left;
     width: 100%;
     font-size: 1.1rem;
     padding: 0.9rem 1.1rem;
@@ -360,15 +370,8 @@ input[type="submit"]:hover {
     background-origin: border-box;
     background-clip: padding-box, border-box;
     transition: 0.3s ease;
-    text-align: left;
-    vertical-align: middle;
     line-height: 1.4;
-}
-
-.form-group textarea {
-    height: 140px;
-    resize: none;
-    vertical-align: top;
+    display: block;
 }
 
 .form-group textarea {
@@ -384,14 +387,17 @@ input[type="submit"]:hover {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    text-align: left;
     color: var(--darkLight);
 }
 
-/* Send button */
+.form-group label {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
 
+/* Send button */
 .send-btn {
-    margin-top: 0.5rem;
     padding: 0.9rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -399,14 +405,38 @@ input[type="submit"]:hover {
     border: none;
     cursor: pointer;
     color: white;
-
+    width: 100%;
     background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
     box-shadow: 0 0 25px rgba(0, 236, 255, 0.45);
-
     transition: 0.3s ease;
 }
 
 .send-btn:hover {
     transform: scale(1.07);
     box-shadow: 0 0 35px var(--gradientName1), 0 0 60px var(--gradientName2);
+}
+
+/* Success popup styling */
+#success-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+/* Show popup */
+#success-popup.show {
+    opacity: 1;
+    bottom: 150px;
+    pointer-events: auto;
 }
