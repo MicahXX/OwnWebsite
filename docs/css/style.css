@@ -548,7 +548,7 @@ body.lightmode #lightmode {
 
 .overlay img.icon {
     display: inline-block;
-    width: clamp(60px, 10vw, 150px);
+    width: clamp(80px, 10vw, 200px);
     height: auto;
     object-fit: contain;
     pointer-events: auto;
