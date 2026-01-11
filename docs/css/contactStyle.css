@@ -333,3 +333,67 @@ input[type="submit"]:hover {
     justify-content: center;
     margin: 2rem 0;
 }
+
+/* Contact form styling */
+
+.contact-form {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 14px;
+    color: var(--darkLight);
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid transparent;
+    outline: none;
+
+    background-image:
+            linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+            linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    transition: 0.3s ease;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 15px rgba(0, 236, 255, 0.5);
+    transform: scale(1.02);
+}
+
+/* Send button */
+
+.send-btn {
+    margin-top: 0.5rem;
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    box-shadow: 0 0 25px rgba(0, 236, 255, 0.45);
+
+    transition: 0.3s ease;
+}
+
+.send-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 35px var(--gradientName1), 0 0 60px var(--gradientName2);
+}
