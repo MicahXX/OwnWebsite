@@ -354,14 +354,21 @@ input[type="submit"]:hover {
     background: rgba(255, 255, 255, 0.08);
     border: 2px solid transparent;
     outline: none;
-
     background-image:
             linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
             linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
     background-origin: border-box;
     background-clip: padding-box, border-box;
-
     transition: 0.3s ease;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.form-group textarea {
+    height: 140px;
+    resize: none;
+    vertical-align: top;
 }
 
 .form-group textarea {
@@ -373,6 +380,12 @@ input[type="submit"]:hover {
 .form-group textarea:focus {
     box-shadow: 0 0 15px rgba(0, 236, 255, 0.5);
     transform: scale(1.02);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    text-align: left;
+    color: var(--darkLight);
 }
 
 /* Send button */
