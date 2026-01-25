@@ -17,27 +17,29 @@
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
-    --background-image: url("../imgs/darkBG.png");
+    --background-image: radial-gradient(circle, #032558, #00224a, #001e3c, #00192e, #001320);
 }
 
 .lightmode {
-    --darkLight: #000000;
-    --whiteLight: #ffffff;
-    --buttonDarkLight: #000000;
-    --gradientName1: #0e297a;
-    --gradientName2: #00ecff;
-    --gradientName3: #0e297a;
-    --gradientName4: #ea8704;
+    --darkLight: #1b1f2a;
+    --whiteLight: #f5f7fb;
+    --buttonDarkLight: #1b1f2a;
+    --gradientName1: #1f3c88;
+    --gradientName2: #2bb0e6;
+    --gradientName3: #1f3c88;
+    --gradientName4: #f2a23a;
+    --gradientName5: #3fd2ff;
+    --gradientName6: #3a6cf4;
     --gradientAnimation1: #ffffff;
-    --gradientAnimation2: #ffffff;
-    --gradientAnimation3: #ffffff;
-    --gradientAnimation4: #000000;
+    --gradientAnimation2: #e6f6ff;
+    --gradientAnimation3: #dbeafe;
+    --gradientAnimation4: #1b1f2a;
     --gradientAnimation5: #ffffff;
-    --gradientAnimation6: #ffffff;
-    --gradientAnimation7: #ffffff;
-    --gradientAnimation8: #020202;
-    --line: #000000;
-    --background-image: url("../imgs/lightBG.png");
+    --gradientAnimation6: #f0f4ff;
+    --gradientAnimation7: #e3e9ff;
+    --gradientAnimation8: #1b1f2a;
+    --line: #d6dbe6;
+    --background-image: radial-gradient(circle, #ffffff, #eaeafb, #d1d7f7, #b3c5f4, #8fb4f1);
 }
 
 html {
@@ -56,7 +58,7 @@ body {
 
 /* Style colors */
 .highlight {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    background: linear-gradient(var(--gradientName5), var(--gradientName6));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -91,7 +93,7 @@ h2, label, #userHealth, #result {
 }
 
 h3 {
-    color: white;
+    color: var(--darkLight);
     font-weight: normal;
     font-size: clamp(1rem, 1.7vw, 1.4rem);
 }
@@ -107,7 +109,7 @@ h5 {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background: var(--whiteLight);
+    background-image: radial-gradient(circle, #032558, #00224a, #001e3c, #00192e, #001320);
     display: flex; flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -125,10 +127,11 @@ h5 {
     font-size: 3rem;
     display: flex;
     gap: 5px;
+    volume: 1;
 }
 
 #loaderText span {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    background: linear-gradient(var(--gradientName5), var(--gradientName6));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -290,15 +293,14 @@ section {
 
 @media (hover: hover) and (min-width: 200px) {
     .tool-badge:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 0 15px rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 0 10px rgba(12, 76, 243, 0.66);
     }
 }
 
 body.lightmode .tool-badge {
     background: rgba(255, 255, 255, 0.9);
     color: #000;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
 /* Settings for smaller screens */
@@ -508,7 +510,6 @@ body.lightmode #lightmode {
     max-width: 1000px;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
 }
@@ -589,20 +590,17 @@ body.lightmode #lightmode {
 }
 
 .overlay a {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    background: linear-gradient(var(--gradientName5), var(--gradientName6));
     color: #fff;
     text-decoration: none;
     padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 26px);
-    border-radius: 25px;
+    border-radius: 20px;
     font-weight: 600;
     pointer-events: auto;
-    box-shadow: 0 0 0.6em rgb(0, 236, 255);
-    transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .overlay a:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 1em rgb(0, 236, 255);
 }
 
 /* Desktop hover zoom effect */
