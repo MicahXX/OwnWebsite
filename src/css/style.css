@@ -93,7 +93,7 @@ h2, label, #userHealth, #result {
 }
 
 h3 {
-    color: var(--darkLight);
+    color: white;
     font-weight: normal;
     font-size: clamp(1rem, 1.7vw, 1.4rem);
 }
