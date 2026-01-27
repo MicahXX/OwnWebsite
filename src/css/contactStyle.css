@@ -6,6 +6,8 @@
     --gradientName2: rgb(14, 41, 122);
     --gradientName3: rgb(0, 236, 255);
     --gradientName4: rgba(255, 145, 0, 0.48);
+    --gradientName5: rgba(42, 223, 255, 0.78);
+    --gradientName6: rgba(0, 52, 255, 0.78);
     --gradientAnimation1: #000000;
     --gradientAnimation2: #000000;
     --gradientAnimation3: #000000;
@@ -15,6 +17,29 @@
     --gradientAnimation7: #020202;
     --gradientAnimation8: #ffffff;
     --line: #ffffff;
+    --background-image: radial-gradient(circle, #032558, #00224a, #001e3c, #00192e, #001320);
+}
+
+.lightmode {
+    --darkLight: #1b1f2a;
+    --whiteLight: #f5f7fb;
+    --buttonDarkLight: #1b1f2a;
+    --gradientName1: #1f3c88;
+    --gradientName2: #2bb0e6;
+    --gradientName3: #1f3c88;
+    --gradientName4: #f2a23a;
+    --gradientName5: #3fd2ff;
+    --gradientName6: #3a6cf4;
+    --gradientAnimation1: #ffffff;
+    --gradientAnimation2: #e6f6ff;
+    --gradientAnimation3: #dbeafe;
+    --gradientAnimation4: #1b1f2a;
+    --gradientAnimation5: #ffffff;
+    --gradientAnimation6: #f0f4ff;
+    --gradientAnimation7: #e3e9ff;
+    --gradientAnimation8: #1b1f2a;
+    --line: #d6dbe6;
+    --background-image: radial-gradient(circle, #ffffff, #eaeafb, #d1d7f7, #b3c5f4, #8fb4f1);
 }
 
 html {
@@ -31,18 +56,26 @@ body {
     font-family: Verdana, serif;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+/* Style colors */
+.highlight {
+    background: linear-gradient(var(--gradientName5), var(--gradientName6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
+.golden {
+    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gray {
+    background: grey;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 h1 {
@@ -53,13 +86,33 @@ h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
 }
 
+h2, label, #userHealth, #result {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1rem, 1.7vw, 1.4rem);
+}
+
+h3 {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1rem, 1.7vw, 1.4rem);
+}
+
+h5 {
+    color: var(--darkLight);
+    font-weight: normal;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Loading Animation at the start */
 #loader {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background: var(--whiteLight);
+    background-image: radial-gradient(circle, #032558, #00224a, #001e3c, #00192e, #001320);
     display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
@@ -74,10 +127,11 @@ h1 {
     font-size: 3rem;
     display: flex;
     gap: 5px;
+    volume: 1;
 }
 
 #loaderText span {
-    background: linear-gradient(var(--gradientName1), var(--gradientName2));
+    background: linear-gradient(var(--gradientName5), var(--gradientName6));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
