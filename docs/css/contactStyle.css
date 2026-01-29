@@ -53,7 +53,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     text-align: center;
-    font-family: Verdana, serif;
+    font-family: "Inter", system-ui, sans-serif;
 }
 
 /* Style colors */
@@ -76,6 +76,10 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", system-ui, sans-serif;
 }
 
 h1 {
@@ -256,7 +260,6 @@ h5 {
 .back-home {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
 }
 
 *,
@@ -360,4 +363,26 @@ h5 {
     opacity: 1;
     bottom: 150px;
     pointer-events: auto;
+}
+
+.back-btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--darkLight);
+    border-radius: 14px;
+    background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.08);
+}
+
+#cursor-canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999999;
 }

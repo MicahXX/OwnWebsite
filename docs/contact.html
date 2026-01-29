@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
-    <link rel="icon" type="image/png" href="../../../Downloads/Minecraft_Turnier/images/Star.png">
+    <link rel="icon" type="image/png" href="../src/imgs/Star.png">
     <link rel="stylesheet" href="css/contactStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<canvas id="cursor-canvas"></canvas>
+
 <div id="loader">
     <h1 id="loaderText">
         <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span>
@@ -36,6 +39,9 @@
                 </label>
             </div>
             <button type="submit" class="send-btn">Send Message</button>
+            <div class="back-home">
+                <a href="index.html" class="back-btn">Back to Home</a>
+            </div>
         </form>
     </div>
 
@@ -46,5 +52,6 @@
 
 <script src="js/startingScreen.js"></script>
 <script src="js/contactMessage.js"></script>
+<script src="js/cursorTrail.js"></script>
 </body>
 </html>
