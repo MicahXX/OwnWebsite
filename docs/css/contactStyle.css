@@ -257,11 +257,6 @@ h5 {
     box-shadow: 0 0 30px var(--gradientName2), 0 0 60px var(--gradientName1);
 }
 
-.back-home {
-    display: flex;
-    justify-content: center;
-}
-
 *,
 *::before,
 *::after {
@@ -372,12 +367,9 @@ h5 {
     text-decoration: none;
     color: var(--darkLight);
     border-radius: 14px;
+    border: none;
     background: linear-gradient(90deg, var(--gradientName1), var(--gradientName2));
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.back-btn:hover {
-    transform: scale(1.08);
 }
 
 #cursor-canvas {
