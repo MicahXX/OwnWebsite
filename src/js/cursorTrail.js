@@ -10,8 +10,7 @@ const pointer = {
 
 const params = {
     pointsNumber: 15,
-    widthFactor: 0.2,
-    mouseThreshold: 0.6,
+    widthFactor: 1.1,
     spring: 0.4,
     friction: 0.5,
 };
@@ -24,7 +23,6 @@ const trail = Array.from({ length: params.pointsNumber }, () => ({
 }));
 
 function updateMousePosition(x, y) {
-    if (window.matchMedia("(max-width: 768px)").matches) return;
     pointer.x = x;
     pointer.y = y;
 }
@@ -34,23 +32,12 @@ window.addEventListener("mousemove", e => {
     updateMousePosition(e.clientX, e.clientY);
 });
 
-window.addEventListener("touchmove", e => {
-    mouseMoved = true;
-    updateMousePosition(
-        e.targetTouches[0].clientX,
-        e.targetTouches[0].clientY
-    );
-});
-
 function setupCanvas() {
     const dpr = window.devicePixelRatio || 1;
-
     canvas.width = window.innerWidth * dpr;
     canvas.height = window.innerHeight * dpr;
-
     canvas.style.width = window.innerWidth + 'px';
     canvas.style.height = window.innerHeight + 'px';
-
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 
@@ -58,14 +45,17 @@ window.addEventListener("resize", setupCanvas);
 setupCanvas();
 
 function update(t) {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        requestAnimationFrame(update);
+        return;
+    }
+
     if (!mouseMoved) {
         pointer.x =
             (0.5 + 0.3 * Math.cos(0.002 * t) * Math.sin(0.005 * t)) *
             window.innerWidth;
         pointer.y =
-            (0.5 +
-                0.2 * Math.cos(0.005 * t) +
-                0.1 * Math.cos(0.01 * t)) *
+            (0.5 + 0.2 * Math.cos(0.005 * t) + 0.1 * Math.cos(0.01 * t)) *
             window.innerHeight;
     }
 
@@ -85,7 +75,7 @@ function update(t) {
         p.y += p.dy;
     });
 
-    ctx.strokeStyle = "rgba(42, 223, 255, 0.35)";
+    ctx.strokeStyle = "rgba(42,223,255,0.78)";
     ctx.lineCap = "round";
     ctx.beginPath();
     ctx.moveTo(trail[0].x, trail[0].y);
@@ -95,23 +85,19 @@ function update(t) {
         const yc = 0.5 * (trail[i].y + trail[i + 1].y);
         ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
         ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
-        ctx.stroke();
     }
 
-    ctx.lineTo(
-        trail[trail.length - 1].x,
-        trail[trail.length - 1].y
-    );
+    ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
     ctx.stroke();
 
     requestAnimationFrame(update);
-
-    let scrolling;
-    window.addEventListener("scroll", () => {
-        ctx.globalAlpha = 0.3;
-        clearTimeout(scrolling);
-        scrolling = setTimeout(() => ctx.globalAlpha = 1, 150);
-    });
 }
+
+let scrolling;
+window.addEventListener("scroll", () => {
+    ctx.globalAlpha = 0.3;
+    clearTimeout(scrolling);
+    scrolling = setTimeout(() => ctx.globalAlpha = 1, 150);
+});
 
 requestAnimationFrame(update);
