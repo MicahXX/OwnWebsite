@@ -14,3 +14,25 @@ splide.on('move', () => {
     splide.Components.Autoplay.pause();
     setTimeout(() => splide.Components.Autoplay.play(), 1000);
 });
+
+let typed = '';
+const secret = 'micah';
+
+document.addEventListener('keydown', e => {
+    if (e.key.length !== 1) return;
+
+    typed += e.key.toLowerCase();
+    typed = typed.slice(-secret.length);
+
+    if (typed === secret) {
+        const overlay = document.createElement('div');
+        overlay.className = 'easter-egg-overlay';
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('animationend', () => {
+            overlay.remove();
+        });
+
+        typed = '';
+    }
+});

@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MicahCode</title>
-    <link rel="icon" type="image/png" href="../../../Downloads/Minecraft_Turnier/imgs/Star.png">
+    <link rel="icon" type="image/png" href="../src/imgs/Star.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous"
+    />
+
 </head>
 <body>
+<div id="scroll-bar"></div>
+<canvas id="cursor-canvas"></canvas>
+
 <div id="loader">
     <h1 id="loaderText">
         <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span>
@@ -36,7 +47,7 @@
     <div class="section-content">
         <h1>About</h1>
 
-        <div class="scroll-hidden fade-right">
+        <div class="scroll-hidden fade-right about-card">
             <h2>
                 Heyo! I'm a 15-year-old student from Austria, currently studying
                 <span class="highlight">Software Engineering</span> at an HTL (Higher Technical School).
@@ -46,7 +57,7 @@
             </h2>
         </div>
 
-        <div class="scroll-hidden fade-left">
+        <div class="scroll-hidden fade-left about-card">
             <h2>
                 I also love video games and have some interest in making
                 <span class="highlight">Games</span> and
@@ -179,20 +190,20 @@
         <h1 class="socials-title scroll-hidden fade-up">SOCIALS</h1>
 
         <div class="myLinks scroll-hidden zoom-in">
-            <a href="https://www.youtube.com/@MizkulMC">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/YouTube_play_button_square_%282013-2017%29.svg/2048px-YouTube_play_button_square_%282013-2017%29.svg.png"
-                     alt="YouTube">
+            <a class="social-card youtube" href="https://www.youtube.com/@MizkulMC" target="_blank">
+                <i class="fab fa-youtube icon"></i>
             </a>
-            <a href="https://github.com/MicahXX">
-                <img src="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" alt="GitHub">
+
+            <a class="social-card github" href="https://github.com/MicahXX" target="_blank">
+                <i class="fab fa-github icon"></i>
             </a>
-            <a href="https://discord.gg/94xPZeD9tP">
-                <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg"
-                     alt="Discord">
+
+            <a class="social-card discord" href="https://discord.gg/94xPZeD9tP" target="_blank">
+                <i class="fab fa-discord icon"></i>
             </a>
-            <a href="contact.html">
-                <img src="https://t3.ftcdn.net/jpg/08/06/26/50/360_F_806265046_zkPvb1uafqbsF0on5DpKr46YNOZApuO2.jpg"
-                     alt="Email">
+
+            <a class="social-card email" href="contact.html">
+                <i class="fas fa-envelope icon"></i>
             </a>
         </div>
 
@@ -211,5 +222,8 @@
 <script src="js/game.js"></script>
 <script src="js/startingScreen.js"></script>
 <script src="js/scrollAnimation.js"></script>
+<script src="js/toolsDragEffect.js"></script>
+<script src="js/cursorTrail.js"></script>
+<script src="js/scrollBar.js"></script>
 </body>
 </html>
