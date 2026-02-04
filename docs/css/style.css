@@ -54,6 +54,13 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: "Inter", system-ui, sans-serif;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Style colors */
