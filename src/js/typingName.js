@@ -1,4 +1,4 @@
-const words = ["Micah", "Mizkul", "Coder", "Minecraft"];
+const words = ["Developer", "Student", "Coder", "Plugin Developer"];
 const typingElement = document.getElementById("typing");
 
 let wordIndex = 0;
@@ -8,19 +8,19 @@ let isDeleting = false;
 function typeEffect() {
     const currentWord = words[wordIndex];
     typingElement.textContent = currentWord.substring(0, charIndex);
-    let speed = isDeleting ? 80 : 150;
+    let speed = isDeleting ? 60 : 120;
 
     if (!isDeleting && charIndex < currentWord.length) {
         charIndex++;
     } else if (!isDeleting) {
         isDeleting = true;
-        speed = 1000;
+        speed = 1500;
     } else if (isDeleting && charIndex > 0) {
         charIndex--;
     } else {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        speed = 500;
+        speed = 300;
     }
 
     setTimeout(typeEffect, speed);
