@@ -2,10 +2,10 @@
   "name": "micah",
   "version": "1.0.0",
   "description": "",
-  "main": "src/Java/Color_mode.js",
+  "main": "docs/Java/Color_mode.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf docs && mkdir docs && cp -r src/* docs/"
+    "build": "rm -rf docs && mkdir docs && cp -r docs/* docs/"
   },
   "private": true
 }
