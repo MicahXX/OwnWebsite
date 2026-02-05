@@ -655,7 +655,7 @@ body.lightmode .splide {
 }
 
 .overlay a {
-    background: deepskyblue;
+    background: linear-gradient(var(--gradientName5));
     color: #fff;
     text-decoration: none;
     padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 26px);
