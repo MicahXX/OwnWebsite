@@ -182,7 +182,7 @@ nav {
     bottom: 5%; left: 50%;
     transform: translateX(-50%);
     padding: clamp(0.3rem, 0.8rem, 1.3rem);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: clamp(0.3rem, 1.6rem, 1.6rem);
@@ -197,6 +197,13 @@ nav {
             var(--gradientAnimation8)) border-box;
     animation: toolsBorderSpin 4s linear infinite;
     z-index: 1000;
+}
+
+/* Show nav only on tablets and mobile */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+    }
 }
 
 nav a.active {
