@@ -84,7 +84,12 @@
     <div class="section-content">
         <h1 class="scroll-hidden fade-up">Timeline</h1>
 
-        <div class="timeline-container">
+        <div class="timeline-selector scroll-hidden fade-up">
+            <button class="timeline-btn active" data-timeline="coding">Coding Journey</button>
+            <button class="timeline-btn" data-timeline="education">Education & Career</button>
+        </div>
+
+        <div class="timeline-container" id="timeline-coding">
             <div class="timeline-item scroll-hidden fade-right">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
@@ -99,8 +104,7 @@
                 <div class="timeline-content">
                     <h3>2023</h3>
                     <h4>Started Learning Java</h4>
-                    <p>After a year I wanted to expand my knowledge
-                        and found Java the programming language used for Minecraft.</p>
+                    <p>After a year I wanted to expand my knowledge and found Java the programming language used for Minecraft.</p>
                 </div>
             </div>
 
@@ -128,6 +132,40 @@
                     <h3>2026</h3>
                     <h4>Coming Soon...</h4>
                     <p>Lets see what I will do in the future!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-container hidden" id="timeline-education">
+            <div class="timeline-item scroll-hidden fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2016-2020</h3>
+                    <h4>Primary School</h4>
+                    <p>I started my education in a Private Primary School,
+                        which was so much fun and really made my childhood years.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-hidden fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2020-2024</h3>
+                    <h4>High School</h4>
+                    <p>In 2020 I got accepted into a Public High School
+                        and got to meet many new friends and slowly learn about
+                        coding and its capabilities.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-hidden fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2024-now</h3>
+                    <h4>Higher Technical School</h4>
+                    <p>In 2024 I got accepted into an Higher Technical School specializing
+                        in Software Engineering, as I was very found of coding and wanted to make
+                        it into my full-time job.</p>
                 </div>
             </div>
         </div>
@@ -294,5 +332,6 @@
 <script src="js/toolsDragEffect.js?v=1.1"></script>
 <script src="js/cursorTrail.js?v=1.1"></script>
 <script src="js/scrollBar.js?v=1.1"></script>
+<script src="js/timelineSwitch.js?v=1.1"></script>
 </body>
 </html>

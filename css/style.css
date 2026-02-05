@@ -1016,7 +1016,7 @@ body.lightmode .social-card.github i { color: #000000; }
 
 .timeline-item:nth-child(odd) {
     flex-direction: row;
-    text-align: right;
+    text-align: left;
 }
 
 .timeline-item:nth-child(even) {
@@ -1129,4 +1129,51 @@ body.lightmode .social-card.github i { color: #000000; }
 
 .timeline-link:hover::after {
     transform: scaleX(1);
+}
+
+/* Timeline Selector */
+.timeline-selector {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.timeline-btn {
+    padding: 0.8rem 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    color: var(--darkLight);
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px solid rgba(42, 223, 255, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+.timeline-btn:hover {
+    border-color: var(--gradientName5);
+}
+
+.timeline-btn.active {
+    background: linear-gradient(90deg, var(--gradientName5));
+    color: white;
+    border-color: transparent;
+}
+
+.timeline-container.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .timeline-selector {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .timeline-btn {
+        width: 100%;
+        padding: 0.7rem 1.5rem;
+    }
 }
