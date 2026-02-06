@@ -44,6 +44,8 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -57,6 +59,8 @@ body {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* hide page scrollbar */
@@ -1190,7 +1194,7 @@ body.lightmode .social-card.github i { color: #000000; }
 
 .rain {
     position: absolute;
-    width: 120vw;
+    width: 100vw;
     height: 100vh;
     z-index: 0;
     left: -10vw;
