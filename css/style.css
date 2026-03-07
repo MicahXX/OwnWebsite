@@ -285,10 +285,11 @@ section {
 
 .tools-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: clamp(10px, 1.5vw, 18px);
     row-gap: clamp(14px, 1.5vw, 18px);
     max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -408,7 +409,6 @@ body.lightmode .tool-badge {
     to { --angle: 360deg; }
 }
 
-/* Home Section - Clean Modern Portfolio */
 #home-title-wrapper {
     display: flex;
     flex-direction: column;
