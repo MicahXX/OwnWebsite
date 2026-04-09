@@ -438,6 +438,21 @@ nav a.active::after {
     box-shadow: 0 0 6px var(--gradientName5), 0 0 12px var(--gradientName5);
 }
 
+@media (max-width: 540px) {
+    nav a span {
+        display: none;
+    }
+
+    nav a {
+        padding: 0.5rem 0.6rem;
+    }
+
+    nav {
+        gap: 0.05rem;
+        padding: 0.4rem 0.5rem;
+    }
+}
+
 /* Light mode override */
 body.lightmode nav {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
