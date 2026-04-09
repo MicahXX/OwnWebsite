@@ -22,11 +22,29 @@
 <canvas id="cursor-canvas"></canvas>
 
 <div id="loader">
-    <h1 id="loaderText">
-        <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span>
-        <span>n</span><span>g</span><span>.</span><span>.</span><span>.</span>
-    </h1>
-    <div class="spinner"></div>
+    <div class="loader-corner tl"></div>
+    <div class="loader-corner tr"></div>
+    <div class="loader-corner bl"></div>
+    <div class="loader-corner br"></div>
+    <div class="loader-scan"></div>
+
+    <div id="loaderText">
+        <span style="animation-delay:0s">M</span>
+        <span style="animation-delay:0.08s">i</span>
+        <span style="animation-delay:0.16s">c</span>
+        <span style="animation-delay:0.24s">a</span>
+        <span style="animation-delay:0.32s">h</span>
+        <span style="animation-delay:0.40s">C</span>
+        <span style="animation-delay:0.48s">o</span>
+        <span style="animation-delay:0.56s">d</span>
+        <span style="animation-delay:0.64s">e</span>
+    </div>
+    <div class="loader-tagline">Personal</div>
+
+    <div class="loader-progress-track">
+        <div class="loader-progress-bar" id="loaderBar"></div>
+    </div>
+    <div class="loader-pct" id="loaderPct">0%</div>
 </div>
 
 <nav>
@@ -361,7 +379,7 @@
 
 <script src="js/projectSlider.js?v=1.1"></script>
 <script src="js/typingName.js?v=1.1"></script>
-<script src="js/startingScreen.js?v=1.1"></script>
+<script src="js/startingScreen.js?v=1.2"></script>
 <script src="js/scrollAnimation.js?v=1.1"></script>
 <script src="js/toolsDragEffect.js?v=1.1"></script>
 <script src="js/cursorTrail.js?v=1.1"></script>

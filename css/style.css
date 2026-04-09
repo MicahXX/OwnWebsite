@@ -252,20 +252,20 @@ h5 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-/* Loading Animation at the start */
 #loader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: radial-gradient(circle, #032558, #00224a, #001e3c, #00192e, #001320);
+    background-image: radial-gradient(circle at 50% 55%, #032558 0%, #00224a 30%, #001e3c 55%, #001320 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    overflow: hidden;
 }
 
 #loader.hidden {
@@ -274,64 +274,144 @@ h5 {
     pointer-events: none;
 }
 
+#loader::before,
+#loader::after {
+    display: none;
+}
+
+.loader-corner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+}
+
+.loader-corner.tl {
+    top: 20px;
+    left: 20px;
+    border-top: 1.5px solid rgba(42, 223, 255, 0.4);
+    border-left: 1.5px solid rgba(42, 223, 255, 0.4);
+}
+
+.loader-corner.tr {
+    top: 20px;
+    right: 20px;
+    border-top: 1.5px solid rgba(42, 223, 255, 0.4);
+    border-right: 1.5px solid rgba(42, 223, 255, 0.4);
+}
+
+.loader-corner.bl {
+    bottom: 20px;
+    left: 20px;
+    border-bottom: 1.5px solid rgba(42, 223, 255, 0.4);
+    border-left: 1.5px solid rgba(42, 223, 255, 0.4);
+}
+
+.loader-corner.br {
+    bottom: 20px;
+    right: 20px;
+    border-bottom: 1.5px solid rgba(42, 223, 255, 0.4);
+    border-right: 1.5px solid rgba(42, 223, 255, 0.4);
+}
+
+.loader-scan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(42, 223, 255, 0.15), rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.15), transparent);
+    animation: loaderScan 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes loaderScan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
 #loaderText {
-    font-size: 3rem;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
     display: flex;
-    gap: 5px;
-    volume: 1;
+    gap: 3px;
 }
 
 #loaderText span {
-    background: linear-gradient(var(--gradientName5), var(--gradientName6));
+    background: linear-gradient(rgba(42, 223, 255, 0.78), rgba(0, 52, 255, 0.78));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     opacity: 0;
-    animation: glow 2.5s infinite;
+    animation: glow 2.5s ease-in-out infinite;
 }
 
-#loaderText span:nth-child(1) {
-    animation-delay: 0s;
+.loader-tagline {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(42, 223, 255, 0.4);
+    animation: taglinePulse 3s ease-in-out infinite;
 }
 
-#loaderText span:nth-child(2) {
-    animation-delay: 0.1s;
+@keyframes taglinePulse {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
 }
 
-#loaderText span:nth-child(3) {
-    animation-delay: 0.2s;
+@keyframes corePulse {
+    0%, 100% {
+        transform: scale(0.85);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
-#loaderText span:nth-child(4) {
-    animation-delay: 0.3s;
+.loader-progress-track {
+    width: 200px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 99px;
+    margin-top: 28px;
+    overflow: hidden;
 }
 
-#loaderText span:nth-child(5) {
-    animation-delay: 0.4s;
+.loader-progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 99px;
+    background: rgba(0, 52, 255, 0.78);
+    box-shadow: 0 0 8px rgba(42, 223, 255, 0.5);
+    transition: width 0.1s linear;
 }
 
-#loaderText span:nth-child(6) {
-    animation-delay: 0.5s;
-}
-
-#loaderText span:nth-child(7) {
-    animation-delay: 0.6s;
-}
-
-#loaderText span:nth-child(8) {
-    animation-delay: 0.7s;
-}
-
-#loaderText span:nth-child(9) {
-    animation-delay: 0.8s;
-}
-
-#loaderText span:nth-child(10) {
-    animation-delay: 0.9s;
-}
-
-#loaderText span:nth-child(11) {
-    animation-delay: 1s;
+.loader-pct {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: rgba(42, 223, 255, 0.4);
+    font-weight: 600;
 }
 
 @keyframes glow {
