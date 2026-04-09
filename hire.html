@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Page</title>
+    <link rel="icon" type="image/png" href="https://cdn3.emoji.gg/emojis/32356-bluemoon.png">
+    <link rel="stylesheet" href="css/hire.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+          crossorigin="anonymous"/>
+</head>
+<body>
+
+<canvas id="cursor-canvas"></canvas>
+
+<a href="index.html" class="back-btn">
+    <i class="fas fa-arrow-left"></i>
+    Back
+</a>
+
+<div class="page">
+
+    <div class="hero scroll-hidden zoom-in">
+        <div class="available-badge">Available for Hire</div>
+        <div class="avatar-wrapper">
+            <img class="avatar" src="https://github.com/MicahXX.png" alt="Micah">
+            <div class="avatar-glow"></div>
+        </div>
+        <h1>Hey, I'm Micah</h1>
+        <p class="hero-sub">
+            15-year-old <span>Software Engineering</span> student from Austria.
+            I build <span>Discord Bots</span>, <span>Minecraft Plugins</span>,
+            and websites, often related to Minecraft.
+        </p>
+    </div>
+
+    <div class="services-section">
+        <h2 class="section-title scroll-hidden fade-up">What I Offer</h2>
+        <div class="services-grid">
+
+            <div class="service-card scroll-hidden fade-up" style="--card-color: #5865F2">
+                <i class="fab fa-discord service-icon"></i>
+                <h3>Discord Bot</h3>
+                <p>Custom bots built in Python for moderation, games, leveling systems, or whatever you need.</p>
+                <a href="https://github.com/MicahXX/67-Negator" target="_blank" class="card-link">
+                    <i class="fab fa-github"></i> Example Bot
+                </a>
+                <div class="service-price">
+                    <span class="price-from">from</span>
+                    <span class="price-amount">€10+</span>
+                    <span class="price-note">/ project</span>
+                </div>
+            </div>
+
+            <div class="service-card scroll-hidden fade-up" style="--card-color: #4CAF50">
+                <i class="fas fa-cube service-icon"></i>
+                <h3>Minecraft Plugin</h3>
+                <p>Paper plugins built with Java for 1.20+ — minigames, economy systems, custom mechanics, and more.</p>
+                <a href="https://github.com/MicahXX/PointHunt" target="_blank" class="card-link">
+                    <i class="fab fa-github"></i> Example Project
+                </a>
+                <div class="service-price">
+                    <span class="price-from">from</span>
+                    <span class="price-amount">€15+</span>
+                    <span class="price-note">/ project</span>
+                </div>
+            </div>
+
+            <div class="service-card scroll-hidden fade-up" style="--card-color: #E34F26">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Page</h3>
+                <p>Static websites (or more with a backend) built with HTML, CSS, and JS — portfolios, landing pages, and small project sites.</p>
+                <a href="https://github.com/MicahXX/OwnWebsite" target="_blank" class="card-link">
+                    <i class="fab fa-github"></i> Example Website
+                </a>
+                <div class="service-price">
+                    <span class="price-from">from</span>
+                    <span class="price-amount">€25+</span>
+                    <span class="price-note">/ page</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="notes-section">
+        <div class="note-card">
+            <i class="fas fa-info-circle"></i>
+            <p>
+                <strong>Prices are starting estimates.</strong> Final cost depends on complexity and scope.
+                All projects include revisions until you're happy.
+                Payments via PayPal. Not sure if I can build what you need? Just ask!
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-sub">
+            Send me a message and I'll get back to you as soon as possible.
+            You can also add me directly on Discord: <strong>micahcode</strong>
+        </p>
+        <div class="contact-buttons">
+            <a href="mailto:mizkulmc@gmail.com" class="contact-btn primary">
+                <i class="fas fa-envelope"></i>
+                mizkulmc@gmail.com
+            </a>
+            <a href="https://discord.gg/94xPZeD9tP" target="_blank" class="contact-btn secondary">
+                <i class="fab fa-discord"></i>
+                Discord Server
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<p class="footer">© 2026 MicahCode</p>
+
+<script src="js/hire.js"></script>
+<script src="js/cursorTrail.js?v=1.1"></script>
+</body>
+</html>
