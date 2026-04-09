@@ -14,6 +14,14 @@ timelineBtns.forEach(btn => {
         });
 
         const selectedTimeline = btn.getAttribute('data-timeline');
-        timelines[selectedTimeline].classList.remove('hidden');
+        const container = timelines[selectedTimeline];
+        container.classList.remove('hidden');
+
+        const unplayed = container.querySelectorAll('.scroll-hidden:not(.scroll-show)');
+        unplayed.forEach((el, i) => {
+            setTimeout(() => {
+                el.classList.add('scroll-show');
+            }, i * 150);
+        });
     });
 });

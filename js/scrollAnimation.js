@@ -72,14 +72,20 @@ document.querySelectorAll("nav a").forEach(link => {
         const navObserver = new IntersectionObserver((entriesNav) => {
             entriesNav.forEach(entryNav => {
                 if (entryNav.isIntersecting) {
-                    targets.forEach((t, i) => {
-                        playElement(t, i * 400);
-                    });
+                    clearTimeout(fallback); // ← clear fallback
+                    targets.forEach((t, i) => playElement(t, i * 150)); // ← 150ms not 400
                     navObserver.disconnect();
                     navScrollActive = false;
                 }
             });
-        }, { threshold: 0.6 });
+        }, { threshold: 0.05, rootMargin: "0px 0px -10% 0px" }); // ← fixed threshold
+
+        // Fallback in case observer never fires (e.g. already at section)
+        const fallback = setTimeout(() => {
+            targets.forEach((t, i) => playElement(t, i * 150));
+            navObserver.disconnect();
+            navScrollActive = false;
+        }, 800);
 
         navObserver.observe(section);
         section.scrollIntoView({ behavior: "smooth", block: "start" });
