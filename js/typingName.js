@@ -41,4 +41,7 @@ window.addEventListener("load", () => {
     setTimeout(hideLoader, remaining);
 });
 
-
+localStorage.removeItem('theme');
+localStorage.removeItem('lightmode');
+localStorage.removeItem('colorMode');
+document.body.classList.remove('lightmode');
