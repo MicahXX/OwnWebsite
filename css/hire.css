@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+root {
+    color-scheme: only light;
+}
+
 html {
     scroll-behavior: smooth;
     scrollbar-color: rgb(14, 41, 122) rgb(16, 54, 150);
