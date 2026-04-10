@@ -295,7 +295,7 @@ h5 {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(42, 223, 255, 0.15), rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.15), transparent);
+    background: linear-gradient(90deg, transparent, rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.3), transparent);
     animation: loaderScan 3s linear infinite;
     pointer-events: none;
 }
