@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-root {
-    color-scheme: only light;
-}
-
 html {
     scroll-behavior: smooth;
     scrollbar-color: rgb(14, 41, 122) rgb(16, 54, 150);
@@ -684,7 +680,7 @@ body::after {
     0%, 100% {
         opacity: 0.3;
     }
-    50% {back
+    50% {
         opacity: 0.7;
     }
 }
