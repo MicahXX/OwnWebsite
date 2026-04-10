@@ -167,26 +167,24 @@ body::after {
     letter-spacing: 0.01em;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    box-shadow:
-            0 2px 16px rgba(0, 0, 0, 0.35),
-            inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    transition:
-            color 0.22s ease,
-            border-color 0.22s ease,
-            background 0.22s ease,
-            box-shadow 0.22s ease,
-            transform 0.18s ease;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: color 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease;
 }
 
 .back-btn:hover {
     color: rgb(0, 220, 255);
     border-color: rgba(0, 200, 255, 0.4);
     background: rgba(0, 50, 110, 0.5);
-    box-shadow:
-            0 2px 20px rgba(0, 0, 0, 0.4),
-            0 0 14px rgba(0, 200, 255, 0.12),
-            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4),
+    0 0 14px rgba(0, 200, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
+
 .page {
     position: relative;
     z-index: 1;
@@ -222,9 +220,8 @@ body::after {
     letter-spacing: 0.05em;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow:
-            0 1px 12px rgba(0, 0, 0, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .available-badge::before {
