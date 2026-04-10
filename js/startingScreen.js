@@ -1,5 +1,7 @@
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
+    if (!loader) return;
+
     const bar = document.getElementById("loaderBar");
     const pct = document.getElementById("loaderPct");
     const minTime = 1500;
@@ -7,6 +9,11 @@ window.addEventListener("load", () => {
 
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+    document.addEventListener("touchmove", preventTouch, { passive: false });
+
+    function preventTouch(e) {
+        e.preventDefault();
+    }
 
     function animateProgress() {
         const elapsed = performance.now() - startTime;
@@ -22,6 +29,7 @@ window.addEventListener("load", () => {
         loader.classList.add("hidden");
         document.documentElement.style.overflow = "";
         document.body.style.overflow = "";
+        document.removeEventListener("touchmove", preventTouch);
     }
 
     const elapsed = performance.now() - startTime;
