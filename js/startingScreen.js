@@ -5,6 +5,9 @@ window.addEventListener("load", () => {
     const minTime = 1500;
     const startTime = performance.now();
 
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
     function animateProgress() {
         const elapsed = performance.now() - startTime;
         const progress = Math.min(100, Math.round((elapsed / minTime) * 100));
@@ -17,6 +20,8 @@ window.addEventListener("load", () => {
 
     function hideLoader() {
         loader.classList.add("hidden");
+        document.documentElement.style.overflow = "";
+        document.body.style.overflow = "";
     }
 
     const elapsed = performance.now() - startTime;
