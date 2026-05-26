@@ -12,11 +12,21 @@ function launchShootingStar() {
     star.addEventListener('animationend', () => star.remove());
 }
 
+let shootingStarTimeout;
+
 function scheduleShootingStar() {
-    setTimeout(() => {
-        launchShootingStar();
+    shootingStarTimeout = setTimeout(() => {
+        if (!document.hidden) launchShootingStar();
         scheduleShootingStar();
     }, 1500 + Math.random() * 3000);
 }
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        clearTimeout(shootingStarTimeout);
+    } else {
+        scheduleShootingStar();
+    }
+});
 
 scheduleShootingStar();
