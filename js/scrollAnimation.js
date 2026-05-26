@@ -34,6 +34,7 @@ function playElement(el, delay = 0) {
 }
 
 document.querySelectorAll(".scroll-hidden").forEach(el => observer.observe(el));
+window._scrollObserver = observer;
 
 let navScrollActive = false;
 
