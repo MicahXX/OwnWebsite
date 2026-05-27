@@ -6,7 +6,7 @@
             role:    "Developer",
             period:  "2025 – now",
             tags:    ["Server Management", "Java", "Spring Boot", "MySQL", "HTML/CSS/JS"],
-            desc:    "I manage the Minecraft servers and have made multiple plugins and an entire webiste for the server (will be released soon).",
+            desc:    "I manage the Minecraft servers and have made multiple plugins and an entire website for the server (will be released soon).",
             discord: "https://discord.gg/hw3X2ZP5K8",
             link:    null,
             color: "rgb(200, 170, 100)",
