@@ -12,6 +12,17 @@
             color: "rgb(200, 170, 100)",
         },
         {
+            img: "https://cdn.discordapp.com/icons/1462963503689371805/0c9f3fb1238e2983216c6e98ef7c67bf.webp?size=512",
+            title:   "PvPHQ",
+            role:    "Moderator",
+            period:  "2026 – now",
+            tags:    ["Moderation", "Java"],
+            desc:    "Active moderator on FlowPVP, handling tickets 24/7. Also made a Fabric mod (outdated) for the server, check it out in Projects/on Github.",
+            discord: "https://discord.gg/flowpvp",
+            link:    { label: "FlowTiers", href: "https://github.com/ykk4ga/FlowTiers2" },
+            color:   "rgb(206,145,11)",
+        },
+        {
             img: "https://cdn.discordapp.com/icons/267364665766445057/846243bfb28bf6dc91d4945f9cec04fb.webp?size=512",
             title:   "ShotgunRaids",
             role:    "Event Contributor & Moderator",
@@ -21,17 +32,6 @@
             discord: "https://discord.gg/shot",
             link:    null,
             color: "rgb(140, 90, 220)",
-        },
-        {
-            img: "https://cdn.discordapp.com/icons/1462963503689371805/2f2b5319f774664c8be08d55f6203d9a.webp?size=512",
-            title:   "FlowPVP",
-            role:    "Moderator",
-            period:  "2026 – now",
-            tags:    ["Moderation", "Java"],
-            desc:    "Active moderator on FlowPVP, handling tickets 24/7. Also made a Fabric mod for the server, check it out in Projects/on Github.",
-            discord: "https://discord.gg/flowpvp",
-            link:    { label: "FlowTiers", href: "https://github.com/ykk4ga/FlowTiers2" },
-            color:   "rgb(42, 223, 255)",
         },
     ];
 

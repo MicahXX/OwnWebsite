@@ -290,33 +290,6 @@ h5 {
     border-right: 1.5px solid rgba(42, 223, 255, 0.4);
 }
 
-.loader-scan {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.3), rgba(42, 223, 255, 0.3), transparent);
-    animation: loaderScan 3s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes loaderScan {
-    0% {
-        top: 0%;
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 1;
-    }
-    100% {
-        top: 100%;
-        opacity: 0;
-    }
-}
-
 #loaderText {
     font-family: "Poppins", system-ui, sans-serif;
     font-size: clamp(3rem, 10vw, 5rem);
