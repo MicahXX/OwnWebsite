@@ -228,6 +228,36 @@ body::after {
     flex-shrink: 0;
 }
 
+.unavailable-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.32rem 0.95rem;
+    border-radius: 99px;
+    background: rgb(54, 13, 13);
+    border: 1px solid rgb(218, 23, 23);
+    color: #ff0000;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.unavailable-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #da1717;
+    box-shadow: 0 0 6px rgb(203, 21, 21), 0 0 12px rgb(255, 0, 0);
+    animation: unbadgeBlink 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
 @keyframes badgeBlink {
     0%, 100% {
         opacity: 1;
@@ -236,6 +266,17 @@ body::after {
     50% {
         opacity: 0.25;
         box-shadow: 0 0 3px rgba(74, 222, 128, 0.3), 0 0 6px rgba(74, 222, 128, 0.15);
+    }
+}
+
+@keyframes unbadgeBlink {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 6px rgb(236, 0, 0), 0 0 12px rgb(143, 33, 33);
+    }
+    50% {
+        opacity: 0.25;
+        box-shadow: 0 0 3px rgb(143, 33, 33), 0 0 6px rgb(96, 34, 34);
     }
 }
 
