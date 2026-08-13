@@ -17,9 +17,9 @@
             role:    "Server Moderator",
             period:  "2026 – now",
             tags:    ["Moderation", "Java"],
-            desc:    "Active moderator on PvPHQ, handling tickets 24/7. Also made a Fabric mod (outdated) for the server, check it out in Projects/on Github.",
+            desc:    "Active moderator on PvPHQ, handling tickets 24/7. Also made a Fabric mod for the server, check it out in on Modrinth.",
             discord: "https://discord.gg/pvphq",
-            link:    { label: "FlowTiers", href: "https://github.com/ykk4ga/FlowTiers2" },
+            link:    { label: "HQTiers", href: "https://modrinth.com/mod/hqtiers" },
             color:   "rgb(206,145,11)",
         },
         {
