@@ -1973,3 +1973,7 @@ body.lightmode .social-card.github i {
 @media (max-width: 600px) {
     .exp-grid { grid-template-columns: 1fr; }
 }
+
+.social-card.kofi i {
+    color: rgba(42, 223, 255, 0.9);
+}
