@@ -25,10 +25,10 @@
         {
             img: "https://cdn.discordapp.com/icons/267364665766445057/846243bfb28bf6dc91d4945f9cec04fb.webp?size=512",
             title:   "ShotgunRaids",
-            role:    "Event Contributor & Moderator",
+            role:    "Event Contributor",
             period:  "2026 – now",
-            tags:    ["Server Management", "Java", "Moderation"],
-            desc:    "Helped out in Development of an event, and now serve as a moderator on the server.",
+            tags:    ["Server Management", "Java"],
+            desc:    "I helped out in the Development of the ShotGunRaids' 1,000 Player COUNTRIES Civilization Event.",
             discord: "https://discord.gg/shot",
             link:    null,
             color: "rgb(140, 90, 220)",
