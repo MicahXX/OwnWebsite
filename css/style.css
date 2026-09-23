@@ -456,19 +456,6 @@ nav a.active i {
     filter: drop-shadow(0 0 8px rgba(0, 220, 255, 0.9));
 }
 
-nav a.active::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 4px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--gradientName5);
-    box-shadow: 0 0 6px var(--gradientName5), 0 0 12px var(--gradientName5);
-}
-
 @media (max-width: 540px) {
     nav a span {
         display: none;

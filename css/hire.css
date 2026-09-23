@@ -187,7 +187,7 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4.5rem;
+    gap: 2.5rem;
 }
 
 .hero {
@@ -378,7 +378,18 @@ body::after {
     border-radius: 14px;
     padding: 1.6rem 1.4rem;
     text-align: left;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.service-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    margin-top: auto;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .service-card:hover {
@@ -429,12 +440,6 @@ body::after {
     background: color-mix(in srgb, var(--card-color, rgb(0, 220, 255)) 18%, transparent);
     border-color: color-mix(in srgb, var(--card-color, rgb(0, 220, 255)) 80%, transparent);
     transform: translateY(-1px);
-}
-
-.service-price {
-    display: flex;
-    align-items: baseline;
-    gap: 0.3rem;
 }
 
 .price-from {
@@ -850,9 +855,8 @@ body::after {
 }
 
 .review-splide {
-    width: 95%;
-    max-width: 640px;
-    margin: 1.5rem auto 0;
+    width: 100%;
+    margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.04);
@@ -861,7 +865,7 @@ body::after {
 }
 
 .review-splide .splide__slide {
-    padding: 2.6rem clamp(1.6rem, 5vw, 3rem) 2.2rem;
+    padding: 1.8rem clamp(1.6rem, 4vw, 2.4rem) 1.6rem;
     box-sizing: border-box;
 }
 
@@ -932,7 +936,7 @@ body::after {
 }
 
 .review-splide .splide__pagination {
-    bottom: 12px !important;
+    bottom: 4px !important;
 }
 
 .review-splide .splide__pagination__page {
