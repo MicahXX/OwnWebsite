@@ -3,6 +3,7 @@ let ticking = false;
 let fadeTimer;
 
 window.addEventListener('scroll', () => {
+    if (!scrollBar) return;
     scrollBar.style.opacity = '1';
     clearTimeout(fadeTimer);
 

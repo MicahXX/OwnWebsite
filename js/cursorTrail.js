@@ -1,5 +1,8 @@
 const canvas = document.getElementById("cursor-canvas");
 const ctx = canvas.getContext("2d");
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const smallScreen = window.matchMedia('(max-width: 768px)');
+let animationFrame = null;
 
 let mouseMoved = false;
 
@@ -22,6 +25,7 @@ const trail = Array.from({ length: params.pointsNumber }, () => ({
     dy: 0,
 }));
 
+/** Move the trail's target to the latest pointer position. */
 function updateMousePosition(x, y) {
     pointer.x = x;
     pointer.y = y;
@@ -32,6 +36,7 @@ window.addEventListener("mousemove", e => {
     updateMousePosition(e.clientX, e.clientY);
 });
 
+/** Size the drawing surface for the viewport and device pixel ratio. */
 function setupCanvas() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = window.innerWidth * dpr;
@@ -44,11 +49,8 @@ function setupCanvas() {
 window.addEventListener("resize", setupCanvas);
 setupCanvas();
 
+/** Draw one spring-based trail frame while decorative motion is enabled. */
 function update(t) {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        requestAnimationFrame(update);
-        return;
-    }
 
     if (!mouseMoved) {
         pointer.x =
@@ -90,7 +92,7 @@ function update(t) {
     ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
     ctx.stroke();
 
-    requestAnimationFrame(update);
+    animationFrame = requestAnimationFrame(update);
 }
 
 let scrolling;
@@ -100,4 +102,17 @@ window.addEventListener("scroll", () => {
     scrolling = setTimeout(() => ctx.globalAlpha = 1, 150);
 });
 
-requestAnimationFrame(update);
+/** Stop drawing for reduced motion, small screens and background tabs. */
+function syncTrailAnimation() {
+    if (animationFrame !== null) cancelAnimationFrame(animationFrame);
+    animationFrame = null;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!reducedMotion.matches && !smallScreen.matches && !document.hidden) {
+        animationFrame = requestAnimationFrame(update);
+    }
+}
+
+reducedMotion.addEventListener('change', syncTrailAnimation);
+smallScreen.addEventListener('change', syncTrailAnimation);
+document.addEventListener('visibilitychange', syncTrailAnimation);
+syncTrailAnimation();

@@ -20,11 +20,14 @@ const observer = new IntersectionObserver(
     }
 );
 
+/** Reveal a section once, respecting the visitor's motion preference. */
 function playElement(el, delay = 0) {
     if (playedSections.has(el)) return;
+    const stagger = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 150;
+    if (stagger === 0) delay = 0;
     if (el.hasAttribute('data-stagger')) {
         [...el.children].forEach((child, i) => {
-            setTimeout(() => child.classList.add('scroll-show'), delay + i * 150);
+            setTimeout(() => child.classList.add('scroll-show'), delay + i * stagger);
         });
     } else {
         setTimeout(() => el.classList.add('scroll-show'), delay);
@@ -65,7 +68,7 @@ document.querySelectorAll("nav a").forEach(link => {
         navScrollActive = true;
 
         if (targets.length === 0) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" });
+            section.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
             setTimeout(() => navScrollActive = false, 300);
             return;
         }
@@ -73,13 +76,13 @@ document.querySelectorAll("nav a").forEach(link => {
         const navObserver = new IntersectionObserver((entriesNav) => {
             entriesNav.forEach(entryNav => {
                 if (entryNav.isIntersecting) {
-                    clearTimeout(fallback); // ← clear fallback
-                    targets.forEach((t, i) => playElement(t, i * 150)); // ← 150ms not 400
+                    clearTimeout(fallback); // Cancel the fallback after the destination becomes visible.
+                    targets.forEach((t, i) => playElement(t, i * 150)); // Stagger section content.
                     navObserver.disconnect();
                     navScrollActive = false;
                 }
             });
-        }, { threshold: 0.05, rootMargin: "0px 0px -10% 0px" }); // ← fixed threshold
+        }, { threshold: 0.05, rootMargin: "0px 0px -10% 0px" }); // Reveal shortly after entering the viewport.
 
         // Fallback in case observer never fires (e.g. already at section)
         const fallback = setTimeout(() => {
@@ -89,13 +92,19 @@ document.querySelectorAll("nav a").forEach(link => {
         }, 800);
 
         navObserver.observe(section);
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        section.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
     });
 });
 
 const navLinks = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("section");
 
+/** Choose immediate scrolling when the visitor requests reduced motion. */
+function scrollBehavior() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
+}
+
+/** Highlight the navigation link for the section currently in view. */
 function updateActiveNav() {
     if (navScrollActive) return;
 
@@ -111,8 +120,10 @@ function updateActiveNav() {
 
     navLinks.forEach(link => {
         link.classList.remove("active");
+        link.removeAttribute('aria-current');
         if (link.getAttribute("href") === `#${currentSection}`) {
             link.classList.add("active");
+            link.setAttribute('aria-current', 'location');
         }
     });
 }

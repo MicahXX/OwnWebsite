@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Page</title>
+    <title>Services &amp; Past Work | MicahCode</title>
     <link rel="icon" type="image/png" href="https://cdn3.emoji.gg/emojis/32356-bluemoon.png">
     <link rel="stylesheet" href="css/hire.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
           crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/intro.css?v=3.0">
+    <link rel="stylesheet" href="css/accessibility.css?v=2.0">
+    <script src="js/startingScreen.js?v=3.0" defer></script>
+    <noscript><style>.scroll-hidden { opacity: 1; transform: none; filter: none; }</style></noscript>
 </head>
 <body>
 
@@ -27,12 +31,12 @@
             <img class="avatar" src="https://github.com/MicahXX.png" alt="Micah">
             <div class="avatar-glow"></div>
         </div>
-        <div class="unavailable-badge">Unavailable for Hire</div>
+        <div class="unavailable-badge">Freelance commissions currently closed</div>
         <h1>Hey, I'm Micah</h1>
         <p class="hero-sub">
-            16-year-old <span>Software Engineering</span> student from Austria.
-            I build <span>Minecraft Plugins</span>, <span>Mods</span>,
-            and <span>websites</span>, often related to Minecraft.
+            16-year-old <span>Computer Science</span> student from Austria.
+            I build <span>Java plugins</span>, <span>Fabric mods</span>
+            and <span>websites</span> for online communities.
         </p>
     </div>
 
@@ -52,7 +56,7 @@
                          alt="ShotgunRaids">
                     <div class="pw-info">
                         <span class="pw-name">ShotgunRaids</span>
-                        <span class="pw-role">Helped out in Development & Moderator</span>
+                        <span class="pw-role">Event development &amp; moderation</span>
                     </div>
                 </div>
                 <div class="pw-card">
@@ -77,7 +81,7 @@
                          alt="ShotgunRaids">
                     <div class="pw-info">
                         <span class="pw-name">ShotgunRaids</span>
-                        <span class="pw-role">Helped out in Development & Moderator</span>
+                        <span class="pw-role">Event development &amp; moderation</span>
                     </div>
                 </div>
                 <div class="pw-card">
@@ -102,7 +106,7 @@
                          alt="ShotgunRaids">
                     <div class="pw-info">
                         <span class="pw-name">ShotgunRaids</span>
-                        <span class="pw-role">Helped out in Development</span>
+                        <span class="pw-role">Event development contributor</span>
                     </div>
                 </div>
                 <div class="pw-card">
@@ -127,7 +131,7 @@
                          alt="ShotgunRaids">
                     <div class="pw-info">
                         <span class="pw-name">ShotgunRaids</span>
-                        <span class="pw-role">Helped out in Development</span>
+                        <span class="pw-role">Event development contributor</span>
                     </div>
                 </div>
                 <div class="pw-card">
@@ -149,14 +153,13 @@
             <div class="service-card scroll-hidden fade-up" style="--card-color: #4CAF50">
                 <i class="fas fa-cube service-icon"></i>
                 <h3>Minecraft Plugin</h3>
-                <p>Paper plugins (most experienced in) built with Java for 1.20+ (can also be old versions)
-                    like minigames, economy systems, custom mechanics and more.</p>
-                <a href="https://github.com/MicahXX/deathBanPlugin" target="_blank" class="card-link">
+                <p>Custom Java plugins for Paper servers, including minigames, economy systems and gameplay mechanics. Minecraft versions are agreed for each project.</p>
+                <a href="https://github.com/MicahXX/deathBanPlugin" target="_blank" rel="noopener noreferrer" class="card-link">
                     <i class="fab fa-github"></i> Example Plugin
                 </a>
                 <div class="service-price">
                     <span class="price-from">from</span>
-                    <span class="price-amount">20+</span>
+                    <span class="price-amount">€20</span>
                     <span class="price-note">/ plugin</span>
                 </div>
             </div>
@@ -164,30 +167,27 @@
             <div class="service-card scroll-hidden fade-up" style="--card-color: #9C6ADE">
                 <i class="fas fa-hammer service-icon"></i>
                 <h3>Minecraft Mod</h3>
-                <p>I make fabric mods that improve the user experience or add some kind of
-                    new user experience like a tier tagger to view tiers pulled from the api of PvPHQ.</p>
-                <a href="https://github.com/MicahXX/HQTiers" target="_blank" class="card-link">
+                <p>Java/Fabric mods with custom interfaces and API integrations. My HQTiers mod displays player tiers and rankings from PvPHQ directly in Minecraft.</p>
+                <a href="https://github.com/MicahXX/HQTiers" target="_blank" rel="noopener noreferrer" class="card-link">
                     <i class="fab fa-github"></i> Example Mod
                 </a>
                 <div class="service-price">
                     <span class="price-from">from</span>
-                    <span class="price-amount">30+</span>
+                    <span class="price-amount">€30</span>
                     <span class="price-note">/ mod</span>
                 </div>
             </div>
 
             <div class="service-card scroll-hidden fade-up" style="--card-color: #E34F26">
                 <i class="fas fa-code service-icon"></i>
-                <h3>Web Page</h3>
-                <p>Static websites (or more with a backend) built with HTML, CSS
-                    and JS like portfolios, landing pages,
-                    application pages (like in the example) and small project sites.</p>
-                <a href="https://pgnpevents.com/" target="_blank" class="card-link">
+                <h3>Website</h3>
+                <p>Portfolios, landing pages and community websites built with HTML, CSS and JavaScript, with backend features such as application workflows when needed.</p>
+                <a href="https://pgnpevents.com/" target="_blank" rel="noopener noreferrer" class="card-link">
                     <i class="fas fa-external-link-alt"></i> Example Website
                 </a>
                 <div class="service-price">
                     <span class="price-from">from</span>
-                    <span class="price-amount">200+</span>
+                    <span class="price-amount">€200</span>
                     <span class="price-note">/ site</span>
                 </div>
             </div>
@@ -200,8 +200,8 @@
             <i class="fas fa-info-circle"></i>
             <p>
                 <strong>Prices are starting estimates.</strong> Final cost depends on complexity and scope
-                (the prices shown are for projects with similar size as the examples shown).
-                All projects include revisions until you're satisfied with the result.
+                and is quoted in EUR. Deliverables and revision rounds are agreed before work begins.
+                Additional features or changes outside that scope are quoted separately.
                 Payments via PayPal or Crypto. Not sure if I can build what you need? Just ask!
             </p>
         </div>
@@ -273,8 +273,8 @@
 
 <p class="footer">© 2026 micahcode</p>
 
-<script src="js/hire.js"></script>
-<script src="js/cursorTrail.js?v=1.1"></script>
-<script src="js/reviewSlider.js"></script>
+<script src="js/hire.js?v=1.1"></script>
+<script src="js/cursorTrail.js?v=1.2"></script>
+<script src="js/reviewSlider.js?v=1.1"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+/* Preserve the existing layout while supporting keyboard and motion preferences. */
+html { background-color: #001320; }
+body { background-color: #001320; }
+:focus-visible { outline: 2px solid #9ce8fa; outline-offset: 4px; }
+.unavailable-badge { white-space: normal; text-align: center; line-height: 1.6; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    #cursor-canvas, .rain, .shooting-star { display: none !important; }
+    .scroll-hidden { opacity: 1; filter: none; transform: none; }
+    .tool-badge { transform: none !important; }
+    .pastwork-grid { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; }
+    .pastwork-grid .pw-card:nth-child(n + 4) { display: none; }
+    .pastwork-track { mask-image: none; -webkit-mask-image: none; }
+}
