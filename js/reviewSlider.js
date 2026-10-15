@@ -7,7 +7,7 @@ if (typeof Splide !== 'undefined') new Splide('.review-splide', {
     easing: 'cubic-bezier(.42,0,.15,1)',
     pauseOnHover: true,
     pauseOnFocus: true,
-    arrows: true,
+    arrows: false,
     pagination: true,
     height: 'auto',
     reducedMotion: { speed: 0, rewindSpeed: 0, autoplay: 'pause' },
