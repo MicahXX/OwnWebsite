@@ -3,262 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicahCode | Developer &amp; HTL Student</title>
-    <meta name="description" content="Websites, Java plugins and Fabric mods by Micah, an HTL Computer Science student from Austria.">
-    <link rel="icon" type="image/png" href="https://cdn3.emoji.gg/emojis/32356-bluemoon.png">
-    <link rel="stylesheet" href="css/style.css?v=4.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/carousel.css?v=1.1">
-    <link rel="stylesheet" href="css/intro.css?v=3.0">
-    <link rel="stylesheet" href="css/accessibility.css?v=2.0">
-    <noscript><style>.scroll-hidden { opacity: 1; transform: none; filter: none; }</style></noscript>
+    <title>Micah | Developer &amp; HTL Student</title>
+    <meta name="description"
+          content="Websites, Java plugins and Fabric mods by Micah, an HTL Computer Science student from Austria.">
+    <link rel="icon" type="image/png" href="imgs/moon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css?v=5.5">
+    <link rel="stylesheet" href="css/style.css?v=5.7">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/carousel.css?v=5.5">
+    <link rel="stylesheet" href="css/intro.css?v=5.5">
+    <noscript>
+        <style>.scroll-hidden {
+            opacity: 1;
+            transform: none;
+            filter: none;
+        }</style>
+    </noscript>
 </head>
 <body>
-<script src="js/startingScreen.js?v=3.0"></script>
+<script src="js/startingScreen.js?v=5.5"></script>
 <div id="scroll-bar"></div>
-<canvas id="cursor-canvas" aria-hidden="true"></canvas>
-
-
-<nav aria-label="Main navigation">
-    <a href="#home" aria-label="Home">
-        <i class="fas fa-home"></i>
-        <span>Home</span>
-    </a>
-    <a href="#about" aria-label="About">
-        <i class="fas fa-user"></i>
-        <span>About</span>
-    </a>
-    <a href="#experience" aria-label="Experience">
-        <i class="fas fa-briefcase"></i>
-        <span>Experience</span>
-    </a>
-    <a href="#tools" aria-label="Tools">
-        <i class="fas fa-code"></i>
-        <span>Tools</span>
-    </a>
-    <a href="#projects" aria-label="Projects">
-        <i class="fas fa-folder-open"></i>
-        <span>Projects</span>
-    </a>
-    <a href="#socials" aria-label="Socials">
-        <i class="fas fa-users"></i>
-        <span>Socials</span>
-    </a>
-</nav>
-
-<section id="home">
-    <div class="rain">
-        <div class="left"></div>
-        <div class="left center"></div>
-        <div class="right center"></div>
-        <div class="right"></div>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="wordmark" href="#home" aria-label="MicahCode home">micahcode</a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#home" aria-label="Home">
+                <span>Home</span>
+            </a>
+            <a href="#about" aria-label="About">
+                <span>About</span>
+            </a>
+            <a href="#experience" aria-label="Experience">
+                <span>Experience</span>
+            </a>
+            <a href="#tools" aria-label="Tools">
+                <span>Tools</span>
+            </a>
+            <a href="#projects" aria-label="Projects">
+                <span>Projects</span>
+            </a>
+            <a href="#socials" aria-label="Socials">
+                <span>Socials</span>
+            </a>
+        </nav>
+        <a class="header-cta" href="hire.html">My services</a>
     </div>
-    <div id="home-title-wrapper">
-        <h1>Micah</h1>
-        <div id="subtitle-wrapper">
-            <span id="subtitle-prefix">Developer &amp; HTL student based in <img src="https://flagcdn.com/at.svg" alt="Austria"
-                                                                       title="Austria" style="width:1.2em;height:0.9em;
+</header>
+<main id="main-content">
+
+    <section id="home">
+        <div class="home-inner">
+            <div id="home-title-wrapper">
+                <h1>Micah</h1>
+                <div id="subtitle-wrapper">
+            <span id="subtitle-prefix">Developer &amp; HTL student based in <img src="https://flagcdn.com/at.svg"
+                                                                                 alt="Austria"
+                                                                                 title="Austria" style="width:1.2em;height:0.9em;
                                                                        object-fit:cover;border-radius:2px;vertical-align:middle;
                                                                        display:inline-block;"></span>
-        </div>
-        <div class="home-cta-row">
-            <a href="hire.html" class="btn-primary">My services</a>
-            <a href="#projects" class="btn-ghost">View my projects</a>
-        </div>
-    </div>
-</section>
-
-<section id="about">
-    <div class="section-content">
-        <h1>About</h1>
-
-        <div class="scroll-hidden fade-right about-card">
-            <h2>
-                Hey! I'm a 16-year-old <span class="highlight">Computer Science</span> student
-                from Austria, studying at an HTL (Higher Technical School).
-                I build <span class="highlight">websites</span>, <span class="highlight">Minecraft mods</span> and
-                <span class="highlight">Java plugins</span> for online communities. I also manage servers,
-                collaborate with event teams and enjoy learning new technologies through hands-on projects.
-            </h2>
-        </div>
-
-        <div class="scroll-hidden fade-left about-card">
-            <h2>
-                Want to see what I can build? Explore my <span class="highlight">development services</span>
-                and past client work.
-                <a href="hire.html" class="contact-link">
-                    <span class="golden">Take a look!</span>
-                </a>
-            </h2>
-        </div>
-    </div>
-</section>
-
-<section id="experience">
-    <div class="section-content">
-        <h1 class="scroll-hidden fade-up">Development &amp; Community Experience</h1>
-        <div class="exp-grid" id="expGrid">
-        </div>
-    </div>
-</section>
-
-<section id="tools">
-    <div class="section-content">
-        <h1 class="scroll-hidden fade-up">Tools & Technologies</h1>
-        <div class="tools-wrapper scroll-hidden fade-up">
-            <div class="tool-badge" data-color="#ff8c00"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">JAVA</div>
-            <div class="tool-badge" data-color="#239120"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#</div>
-            <div class="tool-badge" data-color="#E34F26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML</div>
-            <div class="tool-badge" data-color="#1572B6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS</div>
-            <div class="tool-badge" data-color="#F7DF1E"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">JS</div>
-            <div class="tool-badge" data-color="#F05032"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">GIT</div>
-            <div class="tool-badge" data-color="#4479A1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">MYSQL</div>
-            <div class="tool-badge" data-color="#4169E1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">POSTGRESQL</div>
-            <div class="tool-badge" data-color="#00ADD8"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">DOCKER</div>
-            <div class="tool-badge" data-color="#000000"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="">INTELLIJ</div>
-            <div class="tool-badge" data-color="#FF3350"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg" alt="">RIDER</div>
-            <div class="tool-badge" data-color="#21D789"><img src="https://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png" alt="">WEBSTORM</div>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="section-content">
-        <h1 class="scroll-hidden fade-up">Projects</h1>
-
-        <div id="project-carousel" class="splide scroll-hidden fade-right" aria-label="My projects">
-            <div class="splide__track">
-                <ul class="splide__list">
-
-                    <li class="splide__slide">
-                        <img class="bg" src="imgs/pgnpss.png" alt="PGNP Events website preview">
-                        <div class="overlay">
-                            <div class="project-tag">Website · HTML / CSS / JavaScript / PostgreSQL</div>
-                            <img class="icon" src="imgs/PGNG_logo.png" alt="PGNP Icon">
-                            <h3>PGNP Events</h3>
-                            <p>I built a community website for PGNP Events with a three-stage application workflow and a game leaderboard.</p>
-                            <div class="overlay-actions">
-                                <a href="https://pgnpevents.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> View the Website</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="splide__slide">
-                        <img class="bg" src="https://cdn.modrinth.com/data/weACU7Ut/images/f95906c6de6e43420cfaa3a638402e0112d33a3d_350.webp" alt="HQTiers Background">
-                        <div class="overlay">
-                            <div class="project-tag">Fabric Mod · Java</div>
-                            <img class="icon" src="https://cdn.modrinth.com/data/weACU7Ut/3238d9aba79ad5995e6cb32e9c63d949c3eb5566_96.webp" alt="HQTiers Icon">
-                            <h3>HQTiers</h3>
-                            <p>I developed a Java/Fabric mod that brings PvPHQ player tiers and rankings into Minecraft through nametags and in-game interfaces.</p>
-                            <div class="overlay-actions">
-                                <a href="https://modrinth.com/mod/hqtiers" target="_blank" rel="noopener noreferrer" class="modrinth-link">
-                                    <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd"
-                                         viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
-                                        <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
-                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
-                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
-                                        <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
-                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
-                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
-                                        <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
-                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
-                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
-                                    </svg>
-                                    View on Modrinth
-                                </a>
-                                <a href="https://github.com/MicahXX/HQTiers" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="splide__slide">
-                        <img class="bg" src="https://cdn.modrinth.com/data/DQNKpytv/images/ddc3ad1ceaba0c1d293b6d73f3afb224d4479882.png" alt="Better StressBots Background">
-                        <div class="overlay">
-                            <div class="project-tag">Paper Plugin · Java</div>
-                            <img class="icon" src="https://cdn.modrinth.com/data/DQNKpytv/f85ea8ccdad716e37a5951b10bebf64384f87d85.png" alt="Better StressBots icon">
-                            <h3>Better StressBots</h3>
-                            <p>A Java plugin for Paper that creates server-side fake players for load testing and recording cinematic scenes.</p>
-                            <div class="overlay-actions">
-                                <a href="https://modrinth.com/plugin/betterstressbots" target="_blank" rel="noopener noreferrer" class="modrinth-link">
-                                    <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd"
-                                         viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
-                                        <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
-                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
-                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
-                                        <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
-                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
-                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
-                                        <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
-                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
-                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
-                                    </svg>
-                                    View on Modrinth
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="splide__slide">
-                        <img class="bg" src="https://cdn.modrinth.com/data/FpfIuYD3/images/2c1f782d51afe7ae25cd1f307f009cf004da450f.png" alt="DeathBanPlugin Background">
-                        <div class="overlay">
-                            <div class="project-tag">Paper Plugin · Java</div>
-                            <img class="icon" src="https://cdn.modrinth.com/data/FpfIuYD3/ae4841c40f6d8059dcb4a2fa34dc57f42ff60b7f.png" alt="DeathBanPlugin icon">
-                            <h3>DeathBanPlugin</h3>
-                            <p>A configurable Java plugin for Paper that applies death bans for Minecraft community game modes.</p>
-                            <div class="overlay-actions">
-                                <a href="https://modrinth.com/plugin/deathbanplugin" target="_blank" rel="noopener noreferrer" class="modrinth-link">
-                                    <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd"
-                                         viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
-                                        <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
-                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
-                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
-                                        <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
-                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
-                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
-                                        <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
-                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
-                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
-                                    </svg>
-                                    View on Modrinth
-                                </a>
-                                <a href="https://github.com/MicahXX/deathBanPlugin" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code</a>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
+                </div>
+                <div class="home-cta-row">
+                    <a href="hire.html" class="btn-primary">My services</a>
+                    <a href="#projects" class="btn-ghost">View my projects</a>
+                </div>
             </div>
-            <p class="project-position" aria-live="polite" aria-atomic="true">01 / 04 · PGNP Events</p>
+            <div class="hero-art" aria-hidden="true">
+                <div class="orb">
+                    <span class="orb-ring"></span><span class="orb-ring"></span>
+                    <span class="orb-ring"></span><span class="orb-ring"></span>
+                    <span class="orb-ring orb-ring--accent"></span>
+                </div>
+                <span class="art-symbol">&lt;/&gt;</span>
+                <span class="art-coordinate">JAVA / FABRIC / WEB</span>
+            </div>
+            <div class="hero-footer">
+                <span>Websites · Minecraft mods · Java plugins</span>
+                <a href="#about">About </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="socials">
-    <div class="socials-inner">
-        <h1 class="socials-title scroll-hidden fade-up">SOCIALS</h1>
-        <div class="myLinks scroll-hidden zoom-in">
-            <a class="social-card github" aria-label="GitHub" href="https://github.com/MicahXX" target="_blank" rel="noopener noreferrer"><i class="fab fa-github icon"></i></a>
-            <a class="social-card email" aria-label="Email" href="mailto:micahcodedev@gmail.com"><i class="fas fa-envelope icon"></i></a>
-            <a class="social-card kofi" aria-label="Ko-fi" href="https://ko-fi.com/micahcode" target="_blank" rel="noopener noreferrer"><i class="fas fa-mug-hot icon"></i></a>
-        </div>
-        <div id="copyright">
-            <p class="made-with-love">Made with 💙 by Micah</p>
-            <h2><span class="gray">© 2026 micahcode. All rights reserved.</span></h2>
-        </div>
-    </div>
-</section>
+    <section id="about">
+        <div class="section-content">
+            <div class="section-heading"><span class="section-index">01</span>
+                <h2>About</h2></div>
 
-<script src="js/projectSlider.js?v=1.3"></script>
-<script src="js/scrollAnimation.js?v=1.3"></script>
-<script src="js/toolsDragEffect.js?v=1.3"></script>
-<script src="js/cursorTrail.js?v=1.3"></script>
-<script src="js/scrollBar.js?v=1.1"></script>
-<script src="js/timelineSwitch.js?v=1.1"></script>
-<script src="js/rainEffect.js?v=1.1"></script>
-<script src="js/projectData.js?v=1.3"></script>
+            <div class="about-copy">
+                <div class="scroll-hidden fade-right about-card">
+                    <p>
+                        Hey! I'm a 16-year-old <span class="highlight">Computer Science</span> student
+                        from Austria, studying at an HTL (Higher Technical School).
+                        I build <span class="highlight">websites</span>, <span class="highlight">Minecraft mods</span>
+                        and
+                        <span class="highlight">Java plugins</span> for online communities. I also manage servers,
+                        collaborate with event teams and enjoy learning new technologies through hands-on projects.
+                    </p>
+                </div>
+
+                <div class="scroll-hidden fade-left about-card">
+                    <p>
+                        Want to see what I can build? Explore my <span class="highlight">development services</span>
+                        and past client work.
+                        <a href="hire.html" class="contact-link">
+                            <span class="golden">Take a look!</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-content">
+            <div class="section-heading"><span class="section-index">02</span>
+                <h2>Development &amp; Community Experience</h2></div>
+            <div class="exp-grid" id="expGrid">
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <div class="section-content">
+            <div class="section-heading"><span class="section-index">03</span>
+                <h2>Tools &amp; Technologies</h2></div>
+            <div class="tools-wrapper scroll-hidden fade-up">
+                <div class="tool-badge" data-color="#ff8c00"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">JAVA
+                </div>
+                <div class="tool-badge" data-color="#239120"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="">C#
+                </div>
+                <div class="tool-badge" data-color="#E34F26"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">HTML
+                </div>
+                <div class="tool-badge" data-color="#1572B6"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">CSS
+                </div>
+                <div class="tool-badge" data-color="#F7DF1E"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="">JS
+                </div>
+                <div class="tool-badge" data-color="#F05032"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">GIT
+                </div>
+                <div class="tool-badge" data-color="#4479A1"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">MYSQL
+                </div>
+                <div class="tool-badge" data-color="#4169E1"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="PostgreSQL">POSTGRESQL
+                </div>
+                <div class="tool-badge" data-color="#00ADD8"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker">DOCKER
+                </div>
+                <div class="tool-badge" data-color="#000000"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" alt="">INTELLIJ
+                </div>
+                <div class="tool-badge" data-color="#FF3350"><img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rider/rider-original.svg" alt="">RIDER
+                </div>
+                <div class="tool-badge" data-color="#21D789"><img src="imgs/webstorm.svg" alt="">WEBSTORM</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <div class="section-heading"><span class="section-index">04</span>
+                <h2>Projects</h2></div>
+
+            <div id="project-carousel" class="carousel scroll-hidden fade-right" aria-label="My projects">
+                <div class="carousel-track">
+                    <ul class="carousel-list">
+
+                        <li class="carousel-slide">
+                            <div class="project-visual"><span class="project-number">PROJECT / 01</span><img
+                                    class="bg bg--full" loading="lazy" src="imgs/pgnp-preview.png" width="1920"
+                                    height="1080" alt="PGNP Events website preview"></div>
+                            <div class="overlay">
+                                <div class="project-tag">Website · HTML / CSS / JavaScript / PostgreSQL</div>
+                                <img class="icon" src="imgs/PGNG_logo.png" alt="PGNP Icon">
+                                <h3>PGNP Events</h3>
+                                <p>I built a community website for PGNP Events with a three-stage application workflow
+                                    and a game leaderboard.</p>
+                                <div class="overlay-actions">
+                                    <a href="https://pgnpevents.com/" target="_blank" rel="noopener noreferrer">View the
+                                        Website</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide">
+                            <div class="project-visual"><span class="project-number">PROJECT / 02</span><img
+                                    class="bg bg--full" loading="lazy" src="imgs/hqtiers.png" width="1913" height="1073"
+                                    alt="HQTiers player statistics and ranking history graph"></div>
+                            <div class="overlay">
+                                <div class="project-tag">Fabric Mod · Java</div>
+                                <img class="icon" src="imgs/hqtiers-icon.webp" alt="HQTiers Icon">
+                                <h3>HQTiers</h3>
+                                <p>I developed a mod that brings PvPHQ tiers and rankings into Minecraft through
+                                    nametags and in-game interfaces.</p>
+                                <div class="overlay-actions">
+                                    <a href="https://modrinth.com/mod/hqtiers" target="_blank" rel="noopener noreferrer"
+                                       class="modrinth-link">
+                                        <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg"
+                                             fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                                             clip-rule="evenodd"
+                                             viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
+                                            <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
+                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
+                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
+                                            <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
+                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
+                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
+                                            <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
+                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
+                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
+                                        </svg>
+                                        View on Modrinth
+                                    </a>
+                                    <a href="https://github.com/MicahXX/HQTiers" target="_blank"
+                                       rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source
+                                        code</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide">
+                            <div class="project-visual"><span class="project-number">PROJECT / 03</span><img
+                                    class="bg bg--full" loading="lazy" src="imgs/stressbots-preview.png" width="1916"
+                                    height="1075" alt="Better StressBots fake players in Minecraft"></div>
+                            <div class="overlay">
+                                <div class="project-tag">Paper Plugin · Java</div>
+                                <img class="icon" src="imgs/stressbots-icon.png" alt="Better StressBots icon">
+                                <h3>Better StressBots</h3>
+                                <p>A Java plugin that creates server-side fake players for load testing and recording
+                                    cinematic scenes.</p>
+                                <div class="overlay-actions">
+                                    <a href="https://modrinth.com/plugin/betterstressbots" target="_blank"
+                                       rel="noopener noreferrer" class="modrinth-link">
+                                        <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg"
+                                             fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                                             clip-rule="evenodd"
+                                             viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
+                                            <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
+                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
+                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
+                                            <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
+                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
+                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
+                                            <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
+                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
+                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
+                                        </svg>
+                                        View on Modrinth
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide">
+                            <div class="project-visual"><span class="project-number">PROJECT / 04</span><img
+                                    class="bg bg--full" loading="lazy" src="imgs/deathban-preview.png" width="1068"
+                                    height="490" alt="DeathBanPlugin configuration options"></div>
+                            <div class="overlay">
+                                <div class="project-tag">Paper Plugin · Java</div>
+                                <img class="icon" src="imgs/deathban-icon.png" alt="DeathBanPlugin icon">
+                                <h3>DeathBanPlugin</h3>
+                                <p>A very configurable and easy to use death ban plugin</p>
+                                <div class="overlay-actions">
+                                    <a href="https://modrinth.com/plugin/deathbanplugin" target="_blank"
+                                       rel="noopener noreferrer" class="modrinth-link">
+                                        <svg class="modrinth-icon" xmlns="http://www.w3.org/2000/svg"
+                                             fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                                             clip-rule="evenodd"
+                                             viewBox="0 0 600 593" width="16" height="16" aria-hidden="true">
+                                            <path fill="#1bd96a" d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28
+                                         19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95
+                                          34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"/>
+                                            <path fill="#1bd96a" d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24
+                                         171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28
+                                          244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"/>
+                                            <path fill="#1bd96a" d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05
+                                         1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77
+                                          148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"/>
+                                        </svg>
+                                        View on Modrinth
+                                    </a>
+                                    <a href="https://github.com/MicahXX/deathBanPlugin" target="_blank"
+                                       rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source
+                                        code</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="socials">
+        <div class="socials-inner">
+            <div class="socials-top"><h2 class="socials-title scroll-hidden fade-up">SOCIALS</h2></div>
+            <div class="myLinks scroll-hidden zoom-in">
+                <a class="social-card github" aria-label="GitHub" href="https://github.com/MicahXX" target="_blank"
+                   rel="noopener noreferrer"><i class="fab fa-github icon"
+                                                aria-hidden="true"></i><span>GitHub</span></a>
+                <a class="social-card email" aria-label="Email" href="mailto:micahcodedev@gmail.com"><i
+                        class="fas fa-envelope icon" aria-hidden="true"></i><span>Email</span></a>
+                <a class="social-card kofi" aria-label="Ko-fi" href="https://ko-fi.com/micahcode" target="_blank"
+                   rel="noopener noreferrer"><i class="fas fa-mug-hot icon"
+                                                aria-hidden="true"></i><span>Ko-fi</span></a>
+            </div>
+            <div id="copyright" class="footer-line">
+                <p class="made-with-love">Made with 💙 by Micah</p>
+                <h2><span class="gray">© 2026 micahcode. All rights reserved.</span></h2>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/scrollAnimation.js?v=5.6"></script>
+<script src="js/scrollBar.js?v=1.2"></script>
+<script src="js/projectData.js?v=5.6"></script>
+<script src="js/carousel.js?v=5.6"></script>
 </body>
 </html>
