@@ -1,0 +1,45 @@
+.text-link,
+.contact-link,
+.overlay-actions a,
+.review-link,
+.carousel-arrow,
+.exp-btn,
+.footer-line a,
+.hero-footer a {
+    border-bottom-color: transparent;
+    text-decoration: none;
+    background-image: linear-gradient(var(--accent), var(--accent)),
+        linear-gradient(var(--link-line, #68686f), var(--link-line, #68686f));
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 0% 1px, 100% 1px;
+    transition: background-size .35s cubic-bezier(.22, 1, .36, 1), color .25s;
+}
+
+.contact-link {
+    --link-line: var(--gold);
+}
+
+.text-link:is(:hover, :focus-visible),
+.contact-link:is(:hover, :focus-visible),
+.overlay-actions a:is(:hover, :focus-visible),
+.review-link:is(:hover, :focus-visible),
+.carousel-arrow:is(:hover, :focus-visible),
+.exp-btn:is(:hover, :focus-visible),
+.footer-line a:is(:hover, :focus-visible),
+.hero-footer a:is(:hover, :focus-visible) {
+    color: var(--accent);
+    border-bottom-color: transparent;
+    background-size: 100% 1px, 100% 1px;
+}
+
+.social-card > span {
+    padding-bottom: .2rem;
+    background: linear-gradient(var(--accent), var(--accent)) left bottom / 0% 1px no-repeat;
+    transition: background-size .35s ease, color .25s;
+}
+
+.social-card:is(:hover, :focus-visible) > span {
+    color: var(--accent);
+    background-size: 100% 1px;
+}

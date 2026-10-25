@@ -14,8 +14,6 @@
 .hero > .text-link { grid-column: 1; justify-self: start; margin-top: 1.5rem; font-size: .75rem; }
 .pastwork-section { padding: 2rem 0 4rem; }
 .pastwork-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
-.motion-toggle { min-height: 44px; padding: .4rem 0; border: 0; background: transparent; color: var(--muted); font-size: .7rem; text-decoration: underline; text-underline-offset: 4px; }
-.motion-toggle:hover { color: var(--text); }
 .pastwork-window { overflow: hidden; container-type: inline-size; }
 .pastwork-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
 .pw-card { display: flex; align-items: center; gap: 1rem; min-width: 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
@@ -24,13 +22,12 @@
 .pw-info { display: flex; flex-direction: column; }
 .pw-name { font-family: var(--heading); font-size: .95rem; }
 .pw-role { font-size: .65rem; color: var(--muted); line-height: 1.7; }
-/* Matching groups create a continuous loop; duplicate cards stay hidden from assistive technology. */
 .pastwork-copy { display: none; }
 .pastwork-section.is-animated .pastwork-window { mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent); }
-.pastwork-section.is-animated .pastwork-track { display: flex; width: max-content; animation: pastwork-drift 32s linear infinite; }
+.pastwork-section.is-animated .pastwork-track { display: flex; width: max-content; animation: pastwork-drift 44s linear infinite; }
 .pastwork-section.is-animated .pastwork-grid { display: flex; flex-shrink: 0; justify-content: space-around; min-width: 100cqw; gap: 1rem; padding-right: 1rem; }
 .pastwork-section.is-animated .pw-card { width: clamp(260px, 28vw, 350px); flex: 0 0 auto; }
-.pastwork-section:is(.is-paused, .is-offscreen) .pastwork-track { animation-play-state: paused; }
+.pastwork-section.is-offscreen .pastwork-track { animation-play-state: paused; }
 @media (hover: hover) and (pointer: fine) {
     .pastwork-window:hover .pastwork-track { animation-play-state: paused; }
 }

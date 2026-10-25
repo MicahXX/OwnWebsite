@@ -9,12 +9,14 @@
     <link rel="icon" type="image/png" href="imgs/moon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css?v=5.5">
-    <link rel="stylesheet" href="css/style.css?v=5.7">
+    <link rel="stylesheet" href="css/base.css?v=5.16">
+    <link rel="stylesheet" href="css/style.css?v=5.20">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/carousel.css?v=5.5">
-    <link rel="stylesheet" href="css/intro.css?v=5.5">
+    <link rel="stylesheet" href="css/carousel.css?v=5.16">
+    <link rel="stylesheet" href="css/projectPreview.css?v=5.16">
+    <link rel="stylesheet" href="css/intro.css?v=5.10">
+    <link rel="stylesheet" href="css/links.css?v=5.15">
     <noscript>
         <style>.scroll-hidden {
             opacity: 1;
@@ -23,35 +25,29 @@
         }</style>
     </noscript>
 </head>
-<body>
-<script src="js/startingScreen.js?v=5.5"></script>
+<body id="top">
+<script src="js/startingScreen.js?v=5.10"></script>
 <div id="scroll-bar"></div>
-<header class="site-header">
-    <div class="header-inner">
-        <a class="wordmark" href="#home" aria-label="MicahCode home">micahcode</a>
-        <nav class="site-nav" aria-label="Main navigation">
-            <a href="#home" aria-label="Home">
-                <span>Home</span>
-            </a>
-            <a href="#about" aria-label="About">
-                <span>About</span>
-            </a>
-            <a href="#experience" aria-label="Experience">
-                <span>Experience</span>
-            </a>
-            <a href="#tools" aria-label="Tools">
-                <span>Tools</span>
-            </a>
-            <a href="#projects" aria-label="Projects">
-                <span>Projects</span>
-            </a>
-            <a href="#socials" aria-label="Socials">
-                <span>Socials</span>
-            </a>
-        </nav>
-        <a class="header-cta" href="hire.html">My services</a>
-    </div>
-</header>
+<nav class="site-nav" aria-label="Main navigation">
+    <a href="#top" aria-label="Home">
+        <span>Home</span>
+    </a>
+    <a href="#about" aria-label="About">
+        <span>About</span>
+    </a>
+    <a href="#experience" aria-label="Experience">
+        <span>Experience</span>
+    </a>
+    <a href="#tools" aria-label="Tools">
+        <span>Tools</span>
+    </a>
+    <a href="#projects" aria-label="Projects">
+        <span>Projects</span>
+    </a>
+    <a href="#socials" aria-label="Socials">
+        <span>Socials</span>
+    </a>
+</nav>
 <main id="main-content">
 
     <section id="home">
@@ -59,11 +55,11 @@
             <div id="home-title-wrapper">
                 <h1>Micah</h1>
                 <div id="subtitle-wrapper">
-            <span id="subtitle-prefix">Developer &amp; HTL student based in <img src="https://flagcdn.com/at.svg"
+            <span id="subtitle-prefix">Developer &amp; HTL student based <span style="white-space: nowrap">in <img src="https://flagcdn.com/at.svg"
                                                                                  alt="Austria"
                                                                                  title="Austria" style="width:1.2em;height:0.9em;
                                                                        object-fit:cover;border-radius:2px;vertical-align:middle;
-                                                                       display:inline-block;"></span>
+                                                                       display:inline-block;"></span></span>
                 </div>
                 <div class="home-cta-row">
                     <a href="hire.html" class="btn-primary">My services</a>
@@ -72,9 +68,23 @@
             </div>
             <div class="hero-art" aria-hidden="true">
                 <div class="orb">
-                    <span class="orb-ring"></span><span class="orb-ring"></span>
-                    <span class="orb-ring"></span><span class="orb-ring"></span>
+                    <div class="orb-spin">
+                        <span class="orb-meridian"></span><span class="orb-meridian"></span>
+                        <span class="orb-meridian"></span><span class="orb-meridian"></span>
+                    </div>
+                    <span class="orb-ring orb-latitude"></span>
+                    <span class="orb-ring orb-latitude orb-latitude--wide"></span>
                     <span class="orb-ring orb-ring--accent"></span>
+                </div>
+                <div class="orb-moon">
+                    <div class="orb">
+                        <div class="orb-spin">
+                            <span class="orb-meridian"></span><span class="orb-meridian"></span>
+                            <span class="orb-meridian"></span><span class="orb-meridian"></span>
+                        </div>
+                        <span class="orb-ring orb-latitude"></span>
+                        <span class="orb-ring orb-latitude orb-latitude--wide"></span>
+                    </div>
                 </div>
                 <span class="art-symbol">&lt;/&gt;</span>
                 <span class="art-coordinate">JAVA / FABRIC / WEB</span>
@@ -330,9 +340,11 @@
 
 </main>
 
-<script src="js/scrollAnimation.js?v=5.6"></script>
+<script src="js/scrollAnimation.js?v=5.16"></script>
 <script src="js/scrollBar.js?v=1.2"></script>
 <script src="js/projectData.js?v=5.6"></script>
 <script src="js/carousel.js?v=5.6"></script>
+<script src="js/projectPreview.js?v=5.16"></script>
+<script src="js/globe.js?v=5.18"></script>
 </body>
 </html>

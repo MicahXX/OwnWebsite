@@ -1,4 +1,3 @@
-/** Mount the project carousel and keep its position label in sync. */
 (function initializeProjectCarousel() {
     const carousel = document.getElementById('project-carousel');
     if (!carousel || typeof Splide === 'undefined') return;
@@ -16,8 +15,6 @@
         resetProgress: false,
         reducedMotion: { speed: 0, rewindSpeed: 0, autoplay: 'pause' },
     });
-
-    /** Identify the selected project without announcing cloned carousel slides. */
     function updatePosition() {
         const current = String(slider.index + 1).padStart(2, '0');
         const total = String(titles.length).padStart(2, '0');

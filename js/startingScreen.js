@@ -14,105 +14,74 @@
     const intro = document.createElement('dialog');
     intro.id = 'portfolio-intro';
     intro.setAttribute('aria-label', 'Welcome to MicahCode');
-
     const name = 'micahcode';
-    const letters = [...name]
-        .map((letter, index) => `
-            <span class="intro-letter" style="--i:${index}">
-                ${letter}
-            </span>
-        `).join('');
+    const letters = [...name].map((letter, index) =>
+        `<span class="intro-letter-mask" aria-hidden="true"><span class="intro-letter" style="--i:${index}">${letter}</span></span>`
+    ).join('');
 
     intro.innerHTML = `
-        <div class="intro-background"></div>
-        <div class="intro-glow"></div>
-
+        <div class="intro-background" aria-hidden="true"></div>
         <div class="intro-content">
             <div class="intro-eyebrow">
-                <span class="intro-dot"></span>
                 WELCOME TO MY PORTFOLIO
             </div>
-
-            <h1 class="intro-title">
-                ${letters}<span class="intro-brand-dot">.</span>
+            <h1 class="intro-title" aria-label="${name}">
+                ${letters}
             </h1>
-
-            <p class="intro-subtitle">
-                DEVELOPER
-            </p>
-        </div>
-
-        <div class="intro-progress">
-            <div class="intro-progress-bar"></div>
-        </div>
-    `;
+            <p class="intro-subtitle">DEVELOPER</p>
+            <div class="intro-progress" aria-hidden="true">
+                <div class="intro-progress-bar"></div>
+            </div>
+        </div>`;
 
     const previousFocus = document.activeElement;
     let finishTimer;
     let closeTimer;
     let finished = false;
-
-    document.body.append(intro);
-
-
+    let closed = false;
     function closeIntro() {
+        if (closed) return;
+        closed = true;
         clearTimeout(finishTimer);
         clearTimeout(closeTimer);
-
         motionPreference.removeEventListener('change', onMotionChange);
         window.removeEventListener('pagehide', closeIntro);
-
         if (intro.open) intro.close();
         intro.remove();
-
         document.documentElement.classList.remove('intro-active');
-
-        if (!document.documentElement.classList.contains('intro-revealing')) {
-            document.documentElement.classList.remove('intro-revealing');
-        }
-
-        if (previousFocus instanceof HTMLElement &&
-            previousFocus.isConnected &&
-            previousFocus !== document.body) {
+        if (previousFocus instanceof HTMLElement && previousFocus.isConnected && previousFocus !== document.body) {
             previousFocus.focus({ preventScroll: true });
         }
     }
-
     function finishIntro() {
-        if (finished) return;
-
+        if (finished || closed) return;
         finished = true;
         clearTimeout(finishTimer);
-        document.documentElement.classList.add('intro-revealing');
         intro.classList.add('intro-finished');
-
-        closeTimer = window.setTimeout(() => {
-            closeIntro();
-            window.setTimeout(() => {
-                document.documentElement.classList.remove('intro-revealing');
-            }, 1500);
-        }, 900);
+        closeTimer = window.setTimeout(closeIntro, 950);
     }
-
-
-
     function onMotionChange() {
         if (motionPreference.matches) closeIntro();
     }
 
+    intro.addEventListener('animationend', event => {
+        if (event.animationName === 'intro-loading') finishIntro();
+    });
+    intro.addEventListener('transitionend', event => {
+        if (finished && event.target === intro && event.propertyName === 'opacity') closeIntro();
+    });
     intro.addEventListener('cancel', event => {
         event.preventDefault();
         closeIntro();
     });
-
     motionPreference.addEventListener('change', onMotionChange);
     window.addEventListener('pagehide', closeIntro);
+    document.body.append(intro);
 
     try {
         intro.showModal();
         document.documentElement.classList.add('intro-active');
-
-        finishTimer = window.setTimeout(finishIntro, 2100);
+        finishTimer = window.setTimeout(finishIntro, 2300);
     } catch {
         closeIntro();
     }

@@ -22,7 +22,7 @@ main > section {
 }
 
 .home-inner {
-    min-height: calc(100svh - var(--header-height));
+    min-height: 100svh;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
@@ -44,11 +44,6 @@ main > section {
     line-height: .95;
     letter-spacing: -.085em;
     margin-left: -.065em;
-}
-
-#home h1::after {
-    content: '.';
-    color: var(--accent);
 }
 
 #subtitle-wrapper {
@@ -88,6 +83,7 @@ main > section {
 }
 .hero-art {
     position: relative;
+    isolation: isolate;
     aspect-ratio: 1;
     width: 100%;
     max-width: 400px;
@@ -98,35 +94,47 @@ main > section {
 
 .orb {
     position: relative;
+    z-index: 1;
     width: 87%;
     aspect-ratio: 1;
     border: 1px solid #5a5a60;
     border-radius: 50%;
-    transform: rotate(-28deg);
-    background: radial-gradient(circle at 28% 30%, #ffffff09, transparent 60%);
-    animation: globe-orbit 48s linear infinite;
+    transform: rotate(-23.4deg);
+    background: radial-gradient(circle at 28% 30%, #ffffff09, transparent 60%), var(--background);
+    box-shadow: inset 0 0 36px #93dce805;
 }
 
-.orb-ring {
+.orb-ring, .orb-meridian {
     position: absolute;
     inset: 0;
     border: 1px solid #58585e;
     border-radius: 50%;
 }
 
-.orb-ring:nth-child(1) {
-    transform: scaleX(.28);
+.orb-spin {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    animation: globe-spin 24s linear infinite;
 }
 
-.orb-ring:nth-child(2) {
-    transform: scaleX(.63);
+.orb-meridian:nth-child(2) {
+    transform: rotateY(45deg);
 }
 
-.orb-ring:nth-child(3) {
+.orb-meridian:nth-child(3) {
+    transform: rotateY(90deg);
+}
+
+.orb-meridian:nth-child(4) {
+    transform: rotateY(135deg);
+}
+
+.orb-latitude {
     transform: scaleY(.28);
 }
 
-.orb-ring:nth-child(4) {
+.orb-latitude--wide {
     transform: scaleY(.63);
 }
 
@@ -134,6 +142,32 @@ main > section {
     inset: -13%;
     transform: rotate(30deg) scaleY(.3);
     border-color: var(--accent);
+    opacity: .8;
+}
+
+.orb-moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18%;
+    aspect-ratio: 1;
+    margin: -9%;
+    transform: translateX(305%);
+    pointer-events: none;
+}
+
+.orb-moon .orb {
+    width: 100%;
+}
+
+.orb-moon .orb,
+.orb-moon .orb-ring,
+.orb-moon .orb-meridian {
+    border-width: .75px;
+}
+
+.hero-art.is-paused .orb-spin {
+    animation-play-state: paused;
 }
 
 .art-coordinate {
@@ -147,17 +181,18 @@ main > section {
 
 .art-symbol {
     position: absolute;
+    z-index: 3;
     font: 400 3rem var(--heading);
     color: var(--paper);
     letter-spacing: -.15em;
 }
 
-@keyframes globe-orbit {
+@keyframes globe-spin {
     from {
-        transform: rotate(-28deg);
+        transform: rotateY(0deg);
     }
     to {
-        transform: rotate(332deg);
+        transform: rotateY(360deg);
     }
 }
 
@@ -479,10 +514,12 @@ main > section {
     }
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
+@media (max-width: 800px) {
     .home-inner {
         grid-template-columns: 1fr;
         padding-top: 4rem;
+        padding-bottom: 11rem;
+        isolation: isolate;
     }
 
     #home h1 {
@@ -490,12 +527,33 @@ main > section {
     }
 
     .hero-art {
-        width: 180px;
-        margin: 0 2rem 1rem 0;
+        position: absolute;
+        width: clamp(280px, 80vw, 480px);
+        max-width: none;
+        top: 42%;
+        right: -15%;
+        transform: translateY(-50%);
+        margin: 0;
+        opacity: .34;
+        z-index: -1;
+        pointer-events: none;
     }
 
-    .art-symbol {
-        font-size: 2rem;
+    .art-symbol, .art-coordinate {
+        display: none;
+    }
+
+    .hero-footer {
+        bottom: calc(6rem + env(safe-area-inset-bottom));
+        gap: 1rem;
+    }
+
+    #home-title-wrapper {
+        text-shadow: 0 2px 24px var(--background);
+    }
+
+    .home-cta-row .btn-ghost {
+        background: #0c0c0dbb;
     }
 }
 
@@ -503,7 +561,7 @@ main > section {
     .home-inner {
         grid-template-columns: 1fr;
         padding-top: 3rem;
-        padding-bottom: 6rem;
+        padding-bottom: 11rem;
     }
 
     #home h1 {
@@ -515,21 +573,18 @@ main > section {
         max-width: 280px;
     }
 
-    .hero-art {
-        width: 150px;
-        margin: .5rem 1rem 1rem 0;
-    }
-
-    .art-symbol {
-        font-size: 1.6rem;
-    }
-
-    .art-coordinate {
-        font-size: .5rem;
-    }
-
     .hero-footer {
-        font-size: .55rem;
+        font-size: .6rem;
+        letter-spacing: .06em;
+    }
+
+    .hero-footer > span {
+        max-width: 27ch;
+    }
+
+    .hero-footer a {
+        flex-shrink: 0;
+        min-height: 44px;
     }
 
     .hero-footer a {
@@ -541,6 +596,7 @@ main > section {
     }
 
     .home-cta-row a {
+        flex: 1 1 auto;
         padding-inline: 1rem;
         font-size: .75rem;
     }
@@ -563,7 +619,7 @@ main > section {
     }
 
     .tool-badge {
-        font-size: .55rem;
+        font-size: .65rem;
         padding-block: 1.4rem;
     }
 

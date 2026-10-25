@@ -9,6 +9,7 @@
     scrollbar-width: thin;
     scrollbar-color: #666 transparent;
     border: 1px solid var(--line);
+    border-radius: 12px;
 }
 
 .carousel.is-enhanced .carousel-track {
@@ -43,9 +44,9 @@
     position: relative;
     display: grid;
     align-items: center;
-    min-height: 480px;
-    padding: 2.5rem;
-    background: #dededa;
+    min-height: 420px;
+    padding: 3.5rem 1.5rem 2.5rem;
+    background: radial-gradient(ellipse at 50% 40%, #93dce812, transparent 75%), #1c1e20;
     overflow: hidden;
 }
 
@@ -53,15 +54,16 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(#00000006 1px, transparent 1px), linear-gradient(90deg, #00000006 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: linear-gradient(#ffffff03 1px, transparent 1px), linear-gradient(90deg, #ffffff03 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
 }
 
 .project-number {
     position: absolute;
     top: 1.25rem;
     left: 1.5rem;
-    color: #5d5d63;
+    color: #a2a2a7;
     font: .65rem monospace;
     letter-spacing: .1em;
 }
@@ -69,34 +71,30 @@
 .project-visual .bg {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 11;
-    object-fit: cover;
-    object-position: top;
-    border: 5px solid #fafaf7;
-    border-radius: 5px;
-    box-shadow: 0 18px 40px #00000025;
-    transition: transform .5s;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid #ffffff20;
+    border-radius: 6px;
+    background: #0e0e10;
+    box-shadow: 0 16px 36px #00000035;
 }
 
 .project-visual img.bg--full {
-    aspect-ratio: auto;
+    aspect-ratio: 16 / 9;
     object-fit: contain;
 }
 
-.project-visual:hover .bg {
-    transform: translateY(-4px) rotate(-1deg);
-}
-
 .carousel-slide:nth-child(2) .project-visual {
-    background-color: #dae2e1;
+    background-color: #1b2022;
 }
 
 .carousel-slide:nth-child(3) .project-visual {
-    background-color: #e4dfd5;
+    background-color: #23211c;
 }
 
 .carousel-slide:nth-child(4) .project-visual {
-    background-color: #dedce4;
+    background-color: #201e24;
 }
 
 #project-carousel .overlay {
@@ -177,6 +175,8 @@
 }
 
 .carousel-position {
+    min-width: 0;
+    overflow-wrap: anywhere;
     color: var(--muted);
     font-size: .7rem;
     letter-spacing: .02em;
@@ -223,6 +223,7 @@
     background: transparent;
     color: var(--muted);
     font-size: .75rem;
+    white-space: nowrap;
     text-decoration: underline;
     text-underline-offset: 5px;
     transition: color .2s;
@@ -240,7 +241,7 @@
 
     .project-visual {
         min-height: 0;
-        padding: 3rem 2rem 2rem;
+        padding: 2.75rem 1.25rem 1.5rem;
     }
 
     .project-visual .bg {
@@ -249,33 +250,127 @@
     }
 
     .project-tag {
-        margin-bottom: 1.5rem;
+        margin-bottom: .85rem;
     }
 
     #project-carousel .overlay {
-        padding: 1.75rem;
+        padding: 1.25rem;
+    }
+
+    .overlay .icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: .75rem;
+    }
+
+    .overlay p {
+        font-size: .9rem;
+        line-height: 1.65;
+        margin-top: .75rem;
+    }
+
+    .overlay-actions {
+        padding-top: 1rem;
+    }
+}
+@media (max-width: 600px) {
+    #projects .section-content {
+        justify-content: flex-start;
+        padding-top: 2rem;
+        padding-bottom: calc(7rem + env(safe-area-inset-bottom));
+    }
+
+    #projects .section-heading {
+        margin-bottom: 1rem;
+    }
+
+    #project-carousel .overlay {
+        display: grid;
+        grid-template-columns: 30px minmax(0, 1fr);
+        grid-template-rows: auto auto 1fr auto;
+        align-items: start;
+        column-gap: .75rem;
+    }
+
+    .project-tag, .overlay p, .overlay-actions {
+        grid-column: 1 / -1;
+    }
+
+    .overlay .icon {
+        grid-column: 1;
+        align-self: center;
+        margin: 0;
+    }
+
+    .overlay h3 {
+        grid-column: 2;
+        align-self: center;
+        font-size: clamp(1.35rem, 5.8vw, 1.7rem);
+    }
+
+    .carousel-controls {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: center;
+        gap: .5rem;
+        padding-top: 1rem;
+    }
+
+    .carousel-position {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .carousel-pagination {
+        grid-column: 2;
+        grid-row: 2;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        gap: .35rem;
+        min-width: 0;
+    }
+
+    .carousel-page {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .carousel-arrows {
+        display: contents;
+    }
+
+    .carousel-arrow {
+        grid-row: 2;
+        padding-inline: .25rem;
+    }
+
+    .carousel-arrow:first-child {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .carousel-arrow:last-child {
+        grid-column: 3;
+        justify-self: end;
     }
 }
 
 @media (max-width: 480px) {
     .project-visual {
-        padding: 2.75rem 1.25rem 1.5rem;
+        padding: 2.5rem .875rem 1.25rem;
     }
 
     .project-visual .bg {
-        border-width: 3px;
+        border-width: 1px;
     }
 
     #project-carousel .overlay {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .carousel-controls {
         gap: .5rem;
-    }
-
-    .carousel-position {
-        flex-basis: 100%;
     }
 
     .carousel-pagination {
