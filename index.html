@@ -9,13 +9,15 @@
     <link rel="icon" type="image/png" href="imgs/moon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css?v=5.16">
-    <link rel="stylesheet" href="css/style.css?v=5.20">
+    <link rel="stylesheet" href="css/base.css?v=5.40">
+    <link rel="stylesheet" href="css/style.css?v=5.40">
+    <link rel="stylesheet" href="css/pageEnding.css?v=5.40">
+    <link rel="stylesheet" href="css/mainDock.css?v=5.34">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/carousel.css?v=5.16">
-    <link rel="stylesheet" href="css/projectPreview.css?v=5.16">
-    <link rel="stylesheet" href="css/intro.css?v=5.10">
+    <link rel="stylesheet" href="css/projectPreview.css?v=5.36">
+    <link rel="stylesheet" href="css/intro.css?v=5.23">
     <link rel="stylesheet" href="css/links.css?v=5.15">
     <noscript>
         <style>.scroll-hidden {
@@ -26,28 +28,30 @@
     </noscript>
 </head>
 <body id="top">
-<script src="js/startingScreen.js?v=5.10"></script>
+<script src="js/startingScreen.js?v=5.23"></script>
 <div id="scroll-bar"></div>
-<nav class="site-nav" aria-label="Main navigation">
-    <a href="#home" aria-label="Home">
-        <span>Home</span>
-    </a>
-    <a href="#about" aria-label="About">
-        <span>About</span>
-    </a>
-    <a href="#experience" aria-label="Experience">
-        <span>Experience</span>
-    </a>
-    <a href="#tools" aria-label="Tools">
-        <span>Tools</span>
-    </a>
-    <a href="#projects" aria-label="Projects">
-        <span>Projects</span>
-    </a>
-    <a href="#socials" aria-label="Socials">
-        <span>Socials</span>
-    </a>
-</nav>
+<div class="main-dock">
+    <nav class="site-nav main-nav" aria-label="Main navigation">
+        <a href="#home" aria-label="Home">
+            <span>Home</span>
+        </a>
+        <a href="#about" aria-label="About">
+            <span>About</span>
+        </a>
+        <a href="#experience" aria-label="Experience">
+            <span>Experience</span>
+        </a>
+        <a href="#tools" aria-label="Tools">
+            <span>Tools</span>
+        </a>
+        <a href="#projects" aria-label="Projects">
+            <span>Projects</span>
+        </a>
+        <a href="#socials" aria-label="Socials">
+            <span>Socials</span>
+        </a>
+    </nav>
+</div>
 <main id="main-content">
 
     <section id="home">
@@ -86,7 +90,10 @@
                         <span class="orb-ring orb-latitude orb-latitude--wide"></span>
                     </div>
                 </div>
-                <span class="art-symbol">&lt;/&gt;</span>
+                <svg class="art-symbol" viewBox="0 0 80 48" fill="none" stroke="currentColor"
+                     stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M25 12 11 24 25 36M55 12 69 24 55 36M45 7 35 41"/>
+                </svg>
                 <span class="art-coordinate">JAVA / FABRIC / WEB</span>
             </div>
             <div class="hero-footer">
@@ -319,17 +326,19 @@
     </section>
 
     <section id="socials">
-        <div class="socials-inner">
-            <div class="socials-top"><h2 class="socials-title scroll-hidden fade-up">SOCIALS</h2></div>
-            <div class="myLinks scroll-hidden zoom-in">
-                <a class="social-card github" aria-label="GitHub" href="https://github.com/MicahXX" target="_blank"
-                   rel="noopener noreferrer"><i class="fab fa-github icon"
-                                                aria-hidden="true"></i><span>GitHub</span></a>
-                <a class="social-card email" aria-label="Email" href="mailto:micahcodegg@gmail.com"><i
-                        class="fas fa-envelope icon" aria-hidden="true"></i><span>Email</span></a>
-                <a class="social-card kofi" aria-label="Ko-fi" href="https://ko-fi.com/micahcode" target="_blank"
-                   rel="noopener noreferrer"><i class="fas fa-mug-hot icon"
-                                                aria-hidden="true"></i><span>Ko-fi</span></a>
+        <div class="socials-inner page-ending">
+            <div class="ending-content">
+                <div class="socials-top"><h2 class="socials-title scroll-hidden fade-up">SOCIALS</h2></div>
+                <div class="myLinks scroll-hidden zoom-in">
+                    <a class="social-card github" aria-label="GitHub" href="https://github.com/MicahXX" target="_blank"
+                       rel="noopener noreferrer"><i class="fab fa-github icon"
+                                                    aria-hidden="true"></i><span>GitHub</span></a>
+                    <a class="social-card email" aria-label="Email" href="mailto:micahcodegg@gmail.com"><i
+                            class="fas fa-envelope icon" aria-hidden="true"></i><span>Email</span></a>
+                    <a class="social-card kofi" aria-label="Ko-fi" href="https://ko-fi.com/micahcode" target="_blank"
+                       rel="noopener noreferrer"><i class="fas fa-mug-hot icon"
+                                                    aria-hidden="true"></i><span>Ko-fi</span></a>
+                </div>
             </div>
             <div id="copyright" class="footer-line">
                 <p class="made-with-love">Made with 💙 by Micah</p>
@@ -344,7 +353,7 @@
 <script src="js/scrollBar.js?v=1.2"></script>
 <script src="js/projectData.js?v=5.6"></script>
 <script src="js/carousel.js?v=5.6"></script>
-<script src="js/projectPreview.js?v=5.16"></script>
+<script src="js/projectPreview.js?v=5.36"></script>
 <script src="js/globe.js?v=5.18"></script>
 </body>
 </html>

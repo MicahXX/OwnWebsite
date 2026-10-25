@@ -1,0 +1,86 @@
+.main-dock {
+    position: fixed;
+    z-index: 20;
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    width: max-content;
+    max-width: calc(100% - 1.5rem);
+    padding: .375rem;
+    border: 1px solid #ffffff1c;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff06, transparent), #141416e6;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 12px 36px #00000040, inset 0 1px 0 #ffffff08;
+}
+
+.main-dock .main-nav {
+    position: static;
+    transform: none;
+    justify-content: flex-start;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: .25rem;
+    scrollbar-width: thin;
+    scrollbar-color: #606068 transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+.main-nav::-webkit-scrollbar {
+    height: 2px;
+}
+
+.main-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-nav::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #606068;
+}
+
+@supports selector(::-webkit-scrollbar) {
+    .main-dock .main-nav {
+        scrollbar-width: auto;
+        scrollbar-color: auto;
+    }
+}
+
+.main-dock .main-nav a {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+    .main-dock {
+        width: calc(100% - 1.5rem);
+        bottom: calc(.75rem + env(safe-area-inset-bottom));
+        padding: .3rem;
+        border-radius: 17px;
+    }
+
+    .main-dock .main-nav {
+        flex: 1;
+        gap: 0;
+    }
+
+    .main-dock .main-nav a {
+        flex: 1 1 auto;
+        min-height: 46px;
+        padding-inline: clamp(.25rem, 1vw, .5rem);
+        font-size: clamp(.625rem, 2.1vw, .75rem);
+    }
+}
+

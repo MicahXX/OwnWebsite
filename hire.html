@@ -7,12 +7,15 @@
     <link rel="icon" type="image/png" href="imgs/moon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css?v=5.16">
-    <link rel="stylesheet" href="css/hire.css?v=5.16">
+    <link rel="stylesheet" href="css/base.css?v=5.40">
+    <link rel="stylesheet" href="css/hire.css?v=5.40">
+    <link rel="stylesheet" href="css/pageEnding.css?v=5.40">
+    <link rel="stylesheet" href="css/pastWork.css?v=5.22">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
           crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/intro.css?v=5.10">
+    <link rel="stylesheet" href="css/intro.css?v=5.23">
+    <link rel="stylesheet" href="css/wireMoon.css?v=5.22">
     <link rel="stylesheet" href="css/links.css?v=5.15">
     <noscript>
         <style>.scroll-hidden {
@@ -23,73 +26,78 @@
     </noscript>
 </head>
 <body>
-<script src="js/startingScreen.js?v=5.10"></script>
+<script src="js/startingScreen.js?v=5.23"></script>
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<header class="site-header">
-    <div class="header-inner">
-        <a class="wordmark" href="index.html" aria-label="MicahCode home">micahcode</a>
-        <a class="header-cta" href="index.html">Back</a>
-    </div>
-</header>
-<nav class="site-nav" aria-label="Services navigation">
-    <a href="#services">What I Offer</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Get In Touch</a>
-</nav>
+<div class="services-dock">
+    <a class="services-home" href="index.html" aria-label="Back to home" title="Back to home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M3 10.5 12 3l9 7.5M5 9v11h5v-6h4v6h5V9"/>
+        </svg>
+    </a>
+    <span class="services-dock-divider nav-divider" aria-hidden="true"></span>
+    <nav class="site-nav services-nav" aria-label="Services navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
 
 <main class="page" id="main-content">
 
-    <section class="hero scroll-hidden zoom-in">
-        <p class="eyebrow">Services &amp; Past Work</p>
-        <div class="avatar-wrapper">
-            <img class="avatar" src="imgs/micah.jpg" alt="Micah">
+    <section class="home-section" id="home">
+        <div class="hero scroll-hidden zoom-in">
+            <div class="avatar-wrapper">
+                <img class="avatar" src="imgs/micah.jpg" alt="Micah" width="200" height="200">
+                <span class="avatar-orbit" aria-hidden="true"><span class="avatar-moon"><span class="wire-moon"><span class="wire-moon-spin"><span class="wire-moon-meridian"></span><span class="wire-moon-meridian"></span><span class="wire-moon-meridian"></span><span class="wire-moon-meridian"></span></span><span class="wire-moon-ring"></span><span class="wire-moon-ring wire-moon-ring--wide"></span></span></span></span>
+            </div>
+            <div class="unavailable-badge">Freelance commissions currently closed</div>
+            <h1>Hey, I'm Micah</h1>
+            <p class="hero-sub">
+                16-year-old <span>Computer Science</span> student from Austria.
+                I build <span>Java plugins</span>, <span>Fabric mods</span>
+                and <span>websites</span> for online communities.
+            </p>
+            <a class="text-link" href="#services">What I Offer</a>
         </div>
-        <div class="unavailable-badge">Freelance commissions currently closed</div>
-        <h1>Hey, I'm Micah</h1>
-        <p class="hero-sub">
-            16-year-old <span>Computer Science</span> student from Austria.
-            I build <span>Java plugins</span>, <span>Fabric mods</span>
-            and <span>websites</span> for online communities.
-        </p>
-        <a class="text-link" href="#services">What I Offer</a>
-    </section>
 
-    <div class="pastwork-section">
-        <div class="pastwork-heading">
-            <p class="eyebrow">Past Work</p>
-        </div>
-        <div class="pastwork-window">
-            <div class="pastwork-track">
-                <div class="pastwork-grid">
-                    <div class="pw-card">
-                        <img src="imgs/valor-events.webp"
-                             alt="Valor Events">
-                        <div class="pw-info">
-                            <span class="pw-name">Valor Events</span>
-                            <span class="pw-role">Developer</span>
+        <div class="pastwork-section">
+            <div class="pastwork-heading">
+                <p class="eyebrow">Past Work</p>
+            </div>
+            <div class="pastwork-window">
+                <div class="pastwork-track">
+                    <div class="pastwork-grid">
+                        <div class="pw-card">
+                            <img src="imgs/valor-events.webp"
+                                 alt="Valor Events">
+                            <div class="pw-info">
+                                <span class="pw-name">Valor Events</span>
+                                <span class="pw-role">Developer</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pw-card">
-                        <img src="imgs/shotgunraids.webp"
-                             alt="ShotgunRaids">
-                        <div class="pw-info">
-                            <span class="pw-name">ShotgunRaids</span>
-                            <span class="pw-role">Event development contributor</span>
+                        <div class="pw-card">
+                            <img src="imgs/shotgunraids.webp"
+                                 alt="ShotgunRaids">
+                            <div class="pw-info">
+                                <span class="pw-name">ShotgunRaids</span>
+                                <span class="pw-role">Event development contributor</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pw-card">
-                        <img src="imgs/pvphq.webp"
-                             alt="PvPHQ">
-                        <div class="pw-info">
-                            <span class="pw-name">PvPHQ</span>
-                            <span class="pw-role">Server Moderator</span>
+                        <div class="pw-card">
+                            <img src="imgs/pvphq.webp"
+                                 alt="PvPHQ">
+                            <div class="pw-info">
+                                <span class="pw-name">PvPHQ</span>
+                                <span class="pw-role">Server Moderator</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="services-section" id="services">
         <div class="section-heading"><span class="section-index">01</span>
@@ -144,19 +152,19 @@
             </div>
 
         </div>
-    </section>
 
-    <div class="notes-section">
-        <div class="note-card">
-            <i class="fas fa-info-circle"></i>
-            <p>
-                <strong>Prices are starting estimates.</strong> Final cost depends on complexity and scope
-                and is quoted in EUR. Deliverables and revision rounds are agreed before work begins.
-                Additional features or changes outside that scope are quoted separately.
-                Payments via PayPal or Crypto. Not sure if I can build what you need? Just ask!
-            </p>
+        <div class="notes-section">
+            <div class="note-card">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                    <strong>Prices are starting estimates.</strong> Final cost depends on complexity and scope
+                    and is quoted in EUR. Deliverables and revision rounds are agreed before work begins.
+                    Additional features or changes outside that scope are quoted separately.
+                    Payments via PayPal or Crypto. Not sure if I can build what you need? Just ask!
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
 
     <section class="testimonials-section" id="testimonials">
         <div class="section-heading"><span class="section-index">02</span>
@@ -210,28 +218,28 @@
         </div>
     </section>
 
-    <section class="contact-section" id="contact">
-        <p class="eyebrow">Have something in mind?</p>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="contact-sub">
-            Send me a message and I'll get back to you as soon as possible.
-            You can also add me directly on Discord: <span>micahcode</span>
-        </p>
-        <div class="contact-buttons">
-            <a href="mailto:micahcodegg@gmail.com" class="contact-btn primary">
-                <i class="fas fa-envelope"></i>
-                micahcodegg@gmail.com
-            </a>
+    <section class="contact-section page-ending" id="contact">
+        <div class="ending-content">
+            <p class="eyebrow">Have something in mind?</p>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-sub">
+                Send me a message and I'll get back to you as soon as possible.
+                You can also add me directly on Discord: <span>micahcode</span>
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:micahcodegg@gmail.com" class="contact-btn primary">
+                    <i class="fas fa-envelope"></i>
+                    micahcodegg@gmail.com
+                </a>
+            </div>
         </div>
+        <footer class="footer-line"><p>© 2026 micahcode</p><a href="index.html">Back to portfolio</a></footer>
     </section>
 
 </main>
 
-<footer class="footer">
-    <div class="footer-line"><p>© 2026 micahcode</p><a href="index.html">Back to portfolio</a></div>
-</footer>
 <script src="js/scrollAnimation.js?v=5.16"></script>
 
-<script src="js/pastWork.js?v=5.9"></script>
+<script src="js/pastWork.js?v=5.24"></script>
 </body>
 </html>
