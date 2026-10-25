@@ -43,3 +43,7 @@
     color: var(--accent);
     background-size: 100% 1px;
 }
+
+.review-link:not(.review-project-link) {
+    background-image: none;
+}
