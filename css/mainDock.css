@@ -65,22 +65,37 @@
 
 @media (max-width: 600px) {
     .main-dock {
+        --mobile-nav-font: clamp(.65rem, 2.8vw, .75rem);
         width: calc(100% - 1.5rem);
         bottom: calc(.75rem + env(safe-area-inset-bottom));
         padding: .3rem;
         border-radius: 17px;
+        gap: .2rem;
     }
 
     .main-dock .main-nav {
         flex: 1;
         gap: 0;
+        scrollbar-width: none;
     }
 
     .main-dock .main-nav a {
         flex: 1 1 auto;
         min-height: 46px;
-        padding-inline: clamp(.25rem, 1vw, .5rem);
-        font-size: clamp(.625rem, 2.1vw, .75rem);
+        padding-inline: clamp(.2rem, .8vw, .35rem);
+        font-size: var(--mobile-nav-font);
+    }
+
+    .main-dock .main-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-nav a[href="#experience"] span {
+        font-size: 0;
+    }
+
+    .main-nav a[href="#experience"] span::after {
+        content: 'Work';
+        font-size: var(--mobile-nav-font);
     }
 }
-
